@@ -33,7 +33,7 @@ function getUser($username){
 
 	//the following will print to /var/log/apache2/error.log
 	//you can watch it with
-	//	sudo tail -f /var/log/apache2/error.log 
+	//	sudo tail -f /var/log/apache2/error.log
 	//you'll need to use ctrl+c to exit, it'll stay up forever
 	//error_log("Get user $username from ".json_encode($db));
 
@@ -112,6 +112,9 @@ $app->post('/users', function (Request $request, Response $response, array $args
 		'password' => $_POST['password'],
 		'name' => $_POST['name']
 	);
+
+	console.log("Line 116 in api.php\n");
+
 
 	$result = saveUser($user);
 
