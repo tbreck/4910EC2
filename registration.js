@@ -38,7 +38,7 @@ let usernameCheck = (username) => {
 
 let strengthCheck = (password) => {
 	let msg = document.getElementById('passwordmessage');
-	
+
 	//when the button calls this it passes in an event object
 	//when the validation code calls this we get a value (String)
 	if(typeof password === "object"){
@@ -54,8 +54,8 @@ let strengthCheck = (password) => {
 	let result = zxcvbn(password,[]);
 	let score = result.score;
 
-	msg.innerHTML = '<strong>'+strengthLabels[score]+'</strong> Password';		
-	//for debugging: 
+	msg.innerHTML = '<strong>'+strengthLabels[score]+'</strong> Password';
+	//for debugging:
 	console.log('strength score is: '+score);
 	return score;
 };
@@ -83,18 +83,18 @@ let showError = (error) => {
 //they use a scope closure to hold onto the config settings
 //because the inner function was created in a scope where 'message' exists, for example
 //passing a test returns true, failing a test returns a message
-let minLength = (length, message) => 
-	(value) => value.length > length ? true : message; 
-let maxLength = (length, message) => 
-	(value) => value.length < length ? true : message; 
-let regex = (regex,message) => 
+let minLength = (length, message) =>
+	(value) => value.length > length ? true : message;
+let maxLength = (length, message) =>
+	(value) => value.length < length ? true : message;
+let regex = (regex,message) =>
 	(value) => regex.test(value) ? true : message;
 
-let strength = (strength,message) => 
+let strength = (strength,message) =>
 	(value) => strengthCheck(value) >= strength ? true : message;
 let confirmed = (message) =>
 	(value) => document.getElementById("confirm_password").value === value ? true : message;
-let available = (message) => 
+let available = (message) =>
 	() => !usernameExists ? true : message;
 
 
@@ -144,7 +144,7 @@ let submitForm = function(e){
 		let result = validate(id);
 		if(result !== true){
 			showError(result);
-
+			console.log("Submit here!");
 			//stop form from doing it's action
 			e.preventDefault();
 			return false;
