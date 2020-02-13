@@ -99,7 +99,7 @@ $app->get('/users/{name}', function (Request $request, Response $response, array
 
 	//if user does exist, return a 200
 	//we could eventually return the whole user object here if we wanted to
-	return $response->withStatus(200)->getBody()->write("exists");
+	return $response->withStatus(404)->getBody()->write("exists");
 });
 
 //listen for a POST to /users
