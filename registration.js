@@ -8,6 +8,16 @@ let strengthLabels = [
 
 let usernameExists = false;
 
+let setUsernameStatus = (exists) => {
+	if(!exists){
+		usernameExists = false;
+		document.getElementById('usernameStatus').innerHTML = "done";
+	} else {
+		usernameExists = true;
+		document.getElementById('usernameStatus').innerHTML = "error";
+	}
+}
+
 let usernameCheck = (username) => {
 	//when the button calls this it passes in an event object
 	//when the validation code calls this we get a value (String)
@@ -17,28 +27,23 @@ let usernameCheck = (username) => {
 
 	//define our response handler
 	let handler = (response) => {
-		console.log('handled',response)
-		if(response.status === 404){
-			usernameExists = false;
-			document.getElementById('usernameStatus').innerHTML = "done";
-		}else{
-			usernameExists = true;
-			document.getElementById('usernameStatus').innerHTML = "error";
+		if(response !== '404') {
+			setUsernameStatus(true);
+		} else {
+			setUsernameStatus(false);
 		}
 	}
 
 	//make a GET request to users/<username>,
 	//accept a valid status of 200 or 404, anything else will throw a console error
 	//we are not registering an error handler so errors should bubble up to top of app
-	axios.get('users/'+username,{
-		validateStatus: (status) => status === 200 || status === 404
-	})
-		.then(handler);
+	//TODO
+	axios.get('/user?username='+username).then(handler(response));
 };
 
 let strengthCheck = (password) => {
 	let msg = document.getElementById('passwordmessage');
-
+	
 	//when the button calls this it passes in an event object
 	//when the validation code calls this we get a value (String)
 	if(typeof password === "object"){
@@ -51,13 +56,12 @@ let strengthCheck = (password) => {
 	}
 
 	//Calculate the strength of the password.
-	let result = zxcvbn(password,[]);
-	let score = result.score;
-
-	msg.innerHTML = '<strong>'+strengthLabels[score]+'</strong> Password';
-	//for debugging:
-	console.log('strength score is: '+score);
-	return score;
+	//and update the message in the passwordmessage
+	//return the numeric score from zxcvbn
+	//TODO
+	msg.innerText = strengthLabels[zxcvbn(password).score];
+	return zxcvbn(password).score;
+	
 };
 
 
@@ -83,18 +87,27 @@ let showError = (error) => {
 //they use a scope closure to hold onto the config settings
 //because the inner function was created in a scope where 'message' exists, for example
 //passing a test returns true, failing a test returns a message
-let minLength = (length, message) =>
-	(value) => value.length > length ? true : message;
+let minLength = (length, message) => 
+	(value) => value.length > length ? true : message; 
+
 let maxLength = (length, message) =>
-	(value) => value.length < length ? true : message;
-let regex = (regex,message) =>
+	(value) => value.length <= length ? true : message;
+
+let regex = (regex,message) => 
 	(value) => regex.test(value) ? true : message;
 
-let strength = (strength,message) =>
+let strength = (strength,message) => 
 	(value) => strengthCheck(value) >= strength ? true : message;
-let confirmed = (message) =>
-	(value) => document.getElementById("confirm_password").value === value ? true : message;
-let available = (message) =>
+
+let confirmed = (message) => (password) => {
+	if(password === (document.getElementById('confirmed_password').innerText)) {
+		return true;
+	} else {
+		return message;
+	}
+}
+
+let available = (message) => 
 	() => !usernameExists ? true : message;
 
 
@@ -121,20 +134,21 @@ let validation = {
 	]
 };
 
-//given a dom element id, run each appropriate validation test
+//given a dom element id, run each appropriate validation tests
 //against the value contained in the element id
+//if any test returns something other than true(boolean) 
+//stop testing and return the error message that the test returned
 let validate = (id) => {
+	let validators = validation[id];
 	let value = document.getElementById(id).value;
-	let tests = validation[id];
-	for(let i=0;i<tests.length;i++){
-		//execute the test, the inner fctn from above, (like minLength) on the value
-		let result = tests[i](value);
-		if(result !== true){
-			return result;
+	validators.forEach(val => {
+		const str = val(value);
+		if(str !== true){
+			return str;
 		}
-	}
+	});
 	return true;
-}
+};
 
 let submitForm = function(e){
 	let ids = ['username','password','name'];
@@ -144,7 +158,7 @@ let submitForm = function(e){
 		let result = validate(id);
 		if(result !== true){
 			showError(result);
-			console.log("Submit here!");
+
 			//stop form from doing it's action
 			e.preventDefault();
 			return false;
