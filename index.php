@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<title>CPSC 4910</title>
-<h1>Team 10 - Catalog</h1>
+<title>TruckTracker</title>
+<h1>TruckTracker</h1>
 <section>
 	<p>
 <?php
