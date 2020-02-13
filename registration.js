@@ -25,7 +25,6 @@ let usernameCheck = (username) => {
 			usernameExists = true;
 			document.getElementById('usernameStatus').innerHTML = "error";
 		}
-		console.log('usernameExists = ', response.status);
 
 	}
 
