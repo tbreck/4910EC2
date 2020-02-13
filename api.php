@@ -1,16 +1,12 @@
 <?php
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
-error_log('in api.php');
+
 require 'vendor/autoload.php';
 
 function getDB(){
-    $dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
-    $dbuser="admin";
-    $dbpass="cpsc4910";
-	$dbname="test";
-    $dbpath = new PDO("mysql:host=notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com;dbname=test", $dbuser, $dbpass);  
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	//file path to json file
+	$dbpath = 'private/database.json';
 
 	//load it
 	$db = file_get_contents($dbpath);
@@ -25,12 +21,8 @@ function getDB(){
 }
 
 function writeDB($db){
-    $dbhost="notadatabase.cgdotcsuggkr.us-east-1.rds.amazonaws.com";
-    $dbuser="admin";
-    $dbpass="cpsc4910";
-    $dbname="test";
-    $dbpath = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);  
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	//file path to json file
+	$dbpath = 'private/database.json';
 
 	//write it
 	file_put_contents($dbpath, json_encode($db));
@@ -39,9 +31,9 @@ function writeDB($db){
 function getUser($username){
 	$db = getDB();
 
-	//the following error_log command will print to 
-	// /var/log/apache2/error.log you can watch it with
-	//	sudo tail -f /var/log/apache2/error.log 
+	//the following will print to /var/log/apache2/error.log
+	//you can watch it with
+	//	sudo tail -f /var/log/apache2/error.log
 	//you'll need to use ctrl+c to exit, it'll stay up forever
 	//error_log("Get user $username from ".json_encode($db));
 
@@ -97,14 +89,16 @@ $app->get('/users/{name}', function (Request $request, Response $response, array
 	//slim knows that {name} is a variable and pulls it out of the URL for you
 	//its in $args
 	$name = $args['name'];
-	
-	//if user doesn't exist, return a 404
-	if($name !== NULL){
-		return $response->withStatus(404)->getBody()->write("not found");
-	} else {
-		//user does exist, return a 200
-		return $response->withStatus(200)->getBody()->write("exists");
+	$user = getUser($name);
+	if($user === false){
+
+		//if user doesn't exist, return a 404
+		return $response->withStatus(404);
 	}
+
+	//if user does exist, return a 200
+	//we could eventually return the whole user object here if we wanted to
+	return $response->withStatus(200)->getBody()->write("exists");
 });
 
 //listen for a POST to /users
@@ -118,6 +112,9 @@ $app->post('/users', function (Request $request, Response $response, array $args
 		'password' => $_POST['password'],
 		'name' => $_POST['name']
 	);
+
+	console.log("Line 116 in api.php\n");
+
 
 	$result = saveUser($user);
 
@@ -134,34 +131,25 @@ $app->post('/users', function (Request $request, Response $response, array $args
 	return $response->withRedirect('registration.html#'.$result, 302);
 });
 
-//TODO, make a handler for POST /auth
 $app->post('/auth', function (Request $request, Response $response, array $args) {
-
-//listen for POST /auth
 	//create a session, or load an existing session from memory
+	session_start();
 
 	//attempt to verify (authenticate) user
-		//username and password will be in $_POST from login.html form
-		//it worked, save username and name into session memory for later use
-		//direct user to index.php
-	//else it didnt work, kill the session.
-	//and send them back to the login page with a message.
-
-	session_start();
 	$result = authUser($_POST['username'], $_POST['password']);
-
-	if($result){
+	if($result === true){
+		//it worked, save username and name into session memory for later use
 		$_SESSION['username'] = $_POST['username'];
-		$_SESSION['name'] = getUser($_SESSION['username'])['name'];
+		$_SESSION['name'] = getUser($_POST['username'])['name'];
 
-		return $response->withRedirect('/4910WebServer/index.php', 302);
-	} else {
-		session_destroy();
-		return $response->withRedirect('/4910WebServer/index.html#'.$result, 302);
+		//direct user back to index.php
+		return $response->withRedirect('index.php', 302);
 	}
-
+	//else it didnt work, kill the session.
+	session_destroy();
+	//and send them back to the login page with a message.
+	return $response->withRedirect('login.html#'.$result, 302);
 });
-
 $app->run();
 
 
