@@ -90,7 +90,6 @@ $app->get('/users/{name}', function (Request $request, Response $response, array
 	//its in $args
 	$name = $args['name'];
 	$user = getUser($name);
-	console.log("user = ", $user);
 	if($user === false){
 
 		//if user doesn't exist, return a 404

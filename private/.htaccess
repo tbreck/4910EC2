@@ -1,2 +1,4 @@
 order deny,allow
-deny from all
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ api.php [QSA,L]
