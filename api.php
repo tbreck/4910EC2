@@ -35,7 +35,7 @@ function getUser($username){
 	//you can watch it with
 	//	sudo tail -f /var/log/apache2/error.log 
 	//you'll need to use ctrl+c to exit, it'll stay up forever
-	//error_log("Get user $username from ".json_encode($db));
+	error_log("Get user $username from ".json_encode($db));
 
 	//check if user exists
 	if(array_key_exists($username, $db)){
