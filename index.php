@@ -12,7 +12,7 @@ if(isset($_SESSION['name'])){
 	Go <a href="login.html">here to login</a> or <a href="registration.html">here to register</a>.
 	</p>
 </section>
-
+<!-- 
 
 <section>
 <?php
@@ -30,4 +30,4 @@ if (!$conn) {
 echo "Connected successfully";
 console.log("Connected successfully!!!!!");
 ?>
-</section>
+</section> -->
