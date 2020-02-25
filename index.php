@@ -1,9 +1,9 @@
 <?php 
 
-$db = mysqli_connect('54.88.211.55', 'ubuntu', 'CPSC4910Team10', 'admin')
-or die('Error connecting to MySQL Server');
+$db = mysqli_connect('54.88.211.55', 'ubuntu', 'CPSC4910Team10', 'admin');
+// or die('Error connecting to MySQL Server');
  
-echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
+// echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
 if (!$db) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
