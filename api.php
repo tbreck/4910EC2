@@ -10,7 +10,7 @@ if (!$db) {
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
-session_start();
+// session_start();
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
@@ -18,19 +18,20 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require 'vendor/autoload.php';
 
 function getDB(){
-	//file path to json file
-	$dbpath = 'private/database.json';
+	// //file path to json file
+	// $dbpath = 'private/database.json';
 
-	//load it
-	$db = file_get_contents($dbpath);
+	// //load it
+	// $db = file_get_contents($dbpath);
 
-	//if blank, use empty array, else json decode into array
-	if($db === "" || $db === false){
-		$db = Array();
-	}else{
-		$db = json_decode($db,true);
-	}
-	return $db;
+	// //if blank, use empty array, else json decode into array
+	// if($db === "" || $db === false){
+	// 	$db = Array();
+	// }else{
+	// 	$db = json_decode($db,true);
+	// }
+	// return $db;
+
 }
 
 function writeDB($db){
