@@ -1,6 +1,6 @@
 <?php 
 
-$db = mysqli_connect("localhost","ubuntu","CPSC4910Team10","admin") or die("Error " . mysqli_error($db));
+$db = mysqli_connect("localhost","ubuntu","CPSC4910Team10","admin");
 
 // $db = mysqli_connect('54.88.211.55', 'ubuntu', 'CPSC4910Team10', 'admin');
 // or die('Error connecting to MySQL Server');
