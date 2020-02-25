@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php 
+
+$db = mysqli_connect('54.88.211.55', 'ubuntu', 'CPSC4910Team10', 'admin')
+or die('Error connecting to MySQL Server');
+session_start(); 
+echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
+
+?>
 <!DOCTYPE html>
 <title>TruckTracker</title>
 <h1>TruckTracker</h1>
