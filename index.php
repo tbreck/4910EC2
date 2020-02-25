@@ -1,8 +1,8 @@
 <?php 
 
-$db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10");
+// $db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10");
 
-// $db = mysqli_connect('54.88.211.55', 'ubuntu', 'CPSC4910Team10', 'admin');
+$db = mysqli_connect('54.88.211.55', 'admin', 'CPSC4910Team10');
 // or die('Error connecting to MySQL Server');
  
 echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
