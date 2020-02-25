@@ -1,5 +1,7 @@
 <?php
 
+// This section below makes it load new page when submitting......
+
 // $db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
 // or die('Error connecting to MySQL Server');
 //  echo 'This is coming from api.php!';
