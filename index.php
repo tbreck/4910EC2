@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 $db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
 or die('Error connecting to MySQL Server');
- 
+
 echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
 if (!$db) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;
@@ -24,9 +24,10 @@ if(isset($_SESSION['name'])){
 	}
 ?>
 	Go <a href="login.html">here to login</a> or <a href="registration.html">here to register</a>.
+  <a href="/logingPHP/test_admin_login.php">Click here to test file!!!!</a>
 	</p>
 </section>
-<!-- 
+<!--
 
 <section>
 <?php
