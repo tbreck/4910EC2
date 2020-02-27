@@ -1,15 +1,15 @@
 <?php
 
-$db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
-or die('Error connecting to MySQL Server');
-
-echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
-if (!$db) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
+// $db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
+// or die('Error connecting to MySQL Server');
+//
+// echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
+// if (!$db) {
+//     echo "Error: Unable to connect to MySQL." . PHP_EOL;
+//     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+//     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+//     exit;
+// }
 session_start();
 
 ?>

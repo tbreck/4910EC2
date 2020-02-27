@@ -2,16 +2,16 @@
 
 // This section below makes it load new page when submitting......
 
-$db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
-or die('Error connecting to MySQL Server');
- echo 'This is coming from api.php!';
-// echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
-if (!$db) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
-}
+// $db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
+// or die('Error connecting to MySQL Server');
+//  echo 'This is coming from api.php!';
+// // echo 'Connected... ' . mysqli_get_host_info($db) . "\n";
+// if (!$db) {
+//     echo "Error: Unable to connect to MySQL." . PHP_EOL;
+//     echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
+//     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
+//     exit;
+// }
 session_start();
 
 use \Psr\Http\Message\ServerRequestInterface as Request;
@@ -49,7 +49,7 @@ function getUser($username){
 
 	//the following will print to /var/log/apache2/error.log
 	//you can watch it with
-	//	sudo tail -f /var/log/apache2/error.log 
+	//	sudo tail -f /var/log/apache2/error.log
 	//you'll need to use ctrl+c to exit, it'll stay up forever
 	error_log("Get user $username from ".json_encode($db));
 
