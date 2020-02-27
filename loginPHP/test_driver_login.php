@@ -31,12 +31,13 @@ If(isset($_POST['submit'])){
 		if ($value->level == 2) {$_SESSION['managerLoggedIn'] = true;
 			header('Location: manager.php');
 
-}
+
 		if ($value->level == 3) { $_SESSION['adminLoggedIn'] = true;
 			header('Location: admin.php');
 }
 		//header('Location: admin.php');
 		*/
+}
 		$query = "SELECT * FROM TestDB.Driver WHERE email = Email AND password = Password;
 		mysqli_query($db, $query) or die('Error querying database');
 		$result = mysqli_query($db, $query);
