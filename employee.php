@@ -1,7 +1,7 @@
 <!--connect to the database-->
 <?php
 
-$db = mysqli_connect('mysql1.cs.clemson.edu', 'FrwrksWH_n519', 'gopher20lamppost', 'Fireworks_WH_f0tk')
+$db = mysqli_connect("database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com","admin","CPSC4910Team10")
 or die('Error connecting to MySQL Server');
 
 session_start();
@@ -48,24 +48,24 @@ session_start();
 
 <form method= "post">
 Name: &nbsp; <input type="name_input" name="name_input" placeholder="enter item name" required/>
-	<input type="submit" name="search_name" id="search_name" class="button" value="Search by name"/> 
+	<input type="submit" name="search_name" id="search_name" class="button" value="Search by name"/>
 </form>
 
 <form method= "post">
 Item Number: &nbsp; <input type="item_number_input" name="item_number_input" placeholder="enter item number" required/>
-	<input type="submit" name="search_number" id="search_number" class="button" value="Search by item number"/> 
+	<input type="submit" name="search_number" id="search_number" class="button" value="Search by item number"/>
 </form>
 
  <form method= "post">
-	<input type="submit" name="show_all_wares" id="show_all_wares" class="button" value="Show All Wares"/> 
+	<input type="submit" name="show_all_wares" id="show_all_wares" class="button" value="Show All Wares"/>
 </form>
 
 <form method= "post">
-	<input type="submit" name="sort_supplier" id="sort_supplier" class="button" value="Show and Sort Wares by Supplier"/> 
+	<input type="submit" name="sort_supplier" id="sort_supplier" class="button" value="Show and Sort Wares by Supplier"/>
 </form>
 
 <form method= "post">
-	<input type="submit" name="sort_price" id="sort_price" class="button" value="Show and Sort Wares by Price"/> 
+	<input type="submit" name="sort_price" id="sort_price" class="button" value="Show and Sort Wares by Price"/>
 </form>
 
 </div>
@@ -89,10 +89,10 @@ If(isset($_POST['show_all_wares'])){
 	mysqli_query($db, $query) or die('Error querying database');
 	$result = mysqli_query($db, $query);
 
-	
+
 	//print out table
 	while ($row = mysqli_fetch_array($result)){
-	
+
 		echo "<tr> <td>" . $row['item_number'] . "<td>" . $row['name'] ."<td>" . $row['price']. "<td>" . $row['supplier'] . "<td>" . $row['case_quantity'] . "<td>" . $row['stock_cap'] . "<td>" . $row['cases_available'] . "<td>" . $row['items_available'];
 
 	}
@@ -105,10 +105,10 @@ If(isset($_POST['sort_supplier'])){
 	mysqli_query($db, $query) or die('Error querying database');
 	$result = mysqli_query($db, $query);
 
-	
+
 	//print out table
 	while ($row = mysqli_fetch_array($result)){
-	
+
 		echo "<tr> <td>" . $row['item_number'] . "<td>" . $row['name'] ."<td>" . $row['price']. "<td>" . $row['supplier'] . "<td>" . $row['case_quantity'] . "<td>" . $row['stock_cap'] . "<td>" . $row['cases_available'] . "<td>" . $row['items_available'];
 
 	}
@@ -121,44 +121,44 @@ If(isset($_POST['sort_price'])){
 	mysqli_query($db, $query) or die('Error querying database');
 	$result = mysqli_query($db, $query);
 
-	
+
 	//print out table
 	while ($row = mysqli_fetch_array($result)){
-	
+
 		echo "<tr> <td>" . $row['item_number'] . "<td>" . $row['name'] ."<td>" . $row['price']. "<td>" . $row['supplier'] . "<td>" . $row['case_quantity'] . "<td>" . $row['stock_cap'] . "<td>" . $row['cases_available'] . "<td>" . $row['items_available'];
 
 	}
 }
 
 If(isset($_POST['search_name'])){
-	$name = $_POST['name_input']; 
+	$name = $_POST['name_input'];
 
-	//SQL query - search for name input in product table and display all tables 
+	//SQL query - search for name input in product table and display all tables
 	$query = "SELECT * FROM information, product, stock WHERE product.name = '$name' AND information.item_number = product.item_number AND information.item_number = stock.item_number";
 	mysqli_query($db, $query) or die('Error querying database');
 	$result = mysqli_query($db, $query);
 
-	
+
 	//print out table
 	while ($row = mysqli_fetch_array($result)){
-	
+
 		echo "<tr> <td>" . $row['item_number'] . "<td>" . $row['name'] ."<td>" . $row['price']. "<td>" . $row['supplier'] . "<td>" . $row['case_quantity'] . "<td>" . $row['stock_cap'] . "<td>" . $row['cases_available'] . "<td>" . $row['items_available'];
 
 	}
 }
 
 If(isset($_POST['search_number'])){
-	$number = $_POST['item_number_input'];  
+	$number = $_POST['item_number_input'];
 
 	//SQL query - search for item number in all tables and show all
 	$query = "SELECT * FROM information, product, stock WHERE product.item_number = '$number' AND information.item_number = product.item_number AND information.item_number = stock.item_number";
 	mysqli_query($db, $query) or die('Error querying database');
 	$result = mysqli_query($db, $query);
 
-	
+
 	//print out table
 	while ($row = mysqli_fetch_array($result)){
-	
+
 		echo "<tr> <td>" . $row['item_number'] . "<td>" . $row['name'] ."<td>" . $row['price']. "<td>" . $row['supplier'] . "<td>" . $row['case_quantity'] . "<td>" . $row['stock_cap'] . "<td>" . $row['cases_available'] . "<td>" . $row['items_available'];
 
 	}
@@ -172,7 +172,7 @@ If(isset($_POST['search_number'])){
 
 <div class=center>
  <form method= "post">
-	<input type="submit" name="logout" id="logout" class="button" value="Logout"/> 
+	<input type="submit" name="logout" id="logout" class="button" value="Logout"/>
 </form>
 
 
