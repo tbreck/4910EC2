@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Driver_ID, First_Name, Last_Name FROM Driver";
+$sql = "SELECT * FROM Driver";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
