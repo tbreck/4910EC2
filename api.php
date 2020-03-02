@@ -138,7 +138,7 @@ $app->post('/users', function (Request $request, Response $response, array $args
 
 	//if it worked and saved...
 	if($result === true){
-		return $response->withRedirect('login.html', 302);
+		return $response->withRedirect('login.php', 302);
 	}
 	//else user the # to pass an error back to the browser and reload the same page they came from
 	return $response->withRedirect('registration.html#'.$result, 302);
@@ -161,7 +161,7 @@ $app->post('/auth', function (Request $request, Response $response, array $args)
 	//else it didnt work, kill the session.
 	session_destroy();
 	//and send them back to the login page with a message.
-	return $response->withRedirect('login.html#'.$result, 302);
+	return $response->withRedirect('login.php'.$result, 302);
 });
 $app->run();
 
