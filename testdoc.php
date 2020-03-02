@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Driver_ID: " . $row["Driver_ID"] . $row["Email"]. " - Name: " . $row["First_Name"]. " " . $row["Last_Name"]. "<br>";
+        echo "Driver_ID: " . $row["Driver_ID"]. " ". $row["Email"]. " - Name: " . $row["First_Name"]. " " . $row["Last_Name"]. "<br>";
     }
 } else {
     echo "0 results";
