@@ -50,4 +50,3 @@ input{
 		<button type="submit">Submit</button>
 	</form>
 </section>
-<div  id="error"><p>Enter Info</p></div>
