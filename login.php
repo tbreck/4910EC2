@@ -51,4 +51,3 @@ input{
 	</form>
 </section>
 <div  id="error"><p>Enter Info</p></div>
-<script type="text/javascript" src="login.js"></script>
