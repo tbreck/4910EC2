@@ -24,8 +24,8 @@ if(isset($_SESSION['name'])){
 	}
 ?>
 	Go <a href="login.php">here to login</a> or <a href="registration.html">here to register</a>.
-  <a href="test_driver_page.php">Click here to test driver page!</a>
-	<a href="test_sponsor_page.php">Click here to test sponsor page!</a>
+  <a href="loginPHP/test_driver_page.php">Click here to test driver page!</a>
+	<a href="loginPHP/test_sponsor_page.php">Click here to test sponsor page!</a>
 	<a href="loginPHP/test_admin_page.php">Click here to test admin page!</a>
 	</p>
 </section>
