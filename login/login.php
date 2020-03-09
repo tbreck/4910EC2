@@ -16,6 +16,8 @@ console.log("Connected successfully!!!!!");
 If(isset($_POST['submit'])){
 	$Email = $_POST['Username']; //echo $email;
 	$Password = $_POST['Password']; //echo $password;
+	echo $Email;
+	echo $Password;
 
   $query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
 	$result = mysqli_query($db, $query);
