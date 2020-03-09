@@ -35,21 +35,3 @@ If(isset($_POST['submit'])){
 
 
 ?>
-
-
-<!DOCTYPE html>
-<style type="text/css">
-input{
-	margin-bottom:15px;
-}
-</style>
-<title>Login</title>
-<h1>Login!</h1>
-<section>
-	<form action="auth" method="post" id="form">
-		<div><label>Username:<input type="text" id="username" name="username"/></label></div>
-		<div><label>Password:<input type="password" id="password" name="password"/></label></div>
-		<button type="submit">Submit</button>
-	</form>
-</section>
-<div  id="error"><p>Enter Info</p></div>
