@@ -1,13 +1,23 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>Form site</title>
+  <title>Register Form</title>
 </head>
 <body>
-<form method="post" action="connect.php">
-Username : <input type="text" name="username"><br><br>
-Password : <input type="password" name="password"><br><br>
-<input type="submit" value="Submit">
-</form>
+ <form action="login.php" method="POST" id="form">
+  <table>
+   <tr>
+    <td>Email :</td>
+    <td><input type="text" name="email" required></td>
+   </tr>
+   <tr>
+    <td>Password :</td>
+    <td><input type="password" name="password" required></td>
+   </tr>
+   <tr>
+    <td><input type="submit" value="Submit"></td>
+   </tr>
+  </table>
+ </form>
 </body>
 </html>
