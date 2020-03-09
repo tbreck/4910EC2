@@ -1,4 +1,5 @@
 <?php
+
 $servername = "database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com";
 $username = "admin";
 $password = "CPSC4910Team10";
@@ -14,8 +15,8 @@ echo "Connected successfully";
 console.log("Connected successfully!!!!!");
 
 If(isset($_POST['submit'])){
-	$Email = $_POST['Username']; //echo $email;
-	$Password = $_POST['Password']; //echo $password;
+	$Email = $_POST['email']; //echo $email;
+	$Password = $_POST['password']; //echo $password;
 	echo $Email;
 	echo $Password;
 
