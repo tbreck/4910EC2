@@ -13,6 +13,10 @@ if (!$conn) {
 }
 echo "Connected successfully";
 console.log("Connected successfully!!!!!");
+$Email = $_POST['email']; //echo $email;
+$Password = $_POST['password']; //echo $password;
+echo $Email;
+echo $Password;
 
 If(isset($_POST['submit'])){
 	$Email = $_POST['email']; //echo $email;
