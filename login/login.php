@@ -4,6 +4,7 @@
 $db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10', 'TestDB')
 or die('Error connecting to MySQL Server');
 session_start();
+error_reporting(E_ALL);
 
 ?>
 
@@ -19,7 +20,7 @@ If(isset($_POST['submit'])){
 	//SQL query - match username and password
 	$query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
 	$result = mysqli_query($db, $query);
-	if ( mysql_num_rows($result) ) { header('Location: ../testDatabase/test_admin_page.php'); }
+	if ( mysql_num_rows($result ) { header('Location: ../testDatabase/test_admin_page.php'); }
 	else { 
 		echo 'Incorrect login information!\n'; 
 		echo $Email + '\n' + $Password; 
