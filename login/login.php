@@ -30,7 +30,7 @@ if ( !empty(Email) || !empty(Password) ) {
 		$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
 		$result = mysqli_query($db, $query);
 		if (result) {
-			header("Location: testDatabase/test_admin_page.php");
+			header("Location: ../testDatabase/test_admin_page.php");
 		}
 		else {
 			echo "Fail!!!";
