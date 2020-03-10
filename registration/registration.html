@@ -6,21 +6,22 @@ input{
 </style>
 <title>Registration</title>
 <h1>Register for an account!</h1>
-<section>
-	<form action="users" method="post" id="form">
-		<div><label>Username:<input type="text" id="username" name="username"/></label><i id="usernameStatus" class="material-icons">done</i></div>
-		<div><label>Name:<input type="text" id="name" name="name"/></label></div>
-		<div><label>Password:<input type="password" id="password" name="password"/></label></div>
-		<div style="margin-bottom: 15px;">
-			<span id="passwordmeter"><span></span></span>
-			<span id="passwordmessage" aria-live="polite"></span>
-		</div>
-		<div><label>Confirm Password:<input type="password" id="confirm_password"/></label></div>
-		<button type="submit">Submit</button>
-	</form> 
-</section>
-<div  id="error"><p>Enter Info</p></div>
-<script type="text/javascript" src="registration.js"></script>
-<script type="text/javascript" src="../zxcvbn.js"></script>
-<script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<style>
+	.button {
+	background-color: #1c87c9;
+	border: none;
+	color: white;
+	padding: 20px 34px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+ </style>
+</head>
+<body>
+ <a href="driverRegistration.html" class="button">Register as Driver</a>
+ <a href="sponsorRegistration.html" class="button">Register as Sponsor</a>
+</body>
