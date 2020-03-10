@@ -83,11 +83,10 @@ If(isset($_POST['submit'])){
 
 <div class=center>
   <form method= "post">
-    Username &nbsp; <input type="text" Email="emailID" placeholder="enter username" required/><br><br>
+    Email &nbsp; <input type="text" name="emailID" placeholder="enter username" required/><br><br>
     Password &nbsp; <input type="password" name="password" placeholder="enter password" required/><br><br>
 
     <input type="submit" name="submit" id="submit" class="button" value="Login"/>  &nbsp;
-    <input type="submit" name="submit_edit" id="submit" class="button" value="Update Account"/>  &nbsp;
     <input type="reset" value="Cancel"/> &nbsp;
 
 </form>
