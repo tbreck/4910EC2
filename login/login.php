@@ -2,7 +2,7 @@
 
 // $query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
 // 	$result = mysqli_query($db, $query);
-
+ini_set('display_errors', 1);
 
 
 
