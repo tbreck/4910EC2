@@ -19,13 +19,23 @@ If(isset($_POST['submit'])){
 	//SQL query - match username and password
 	$query = "SELECT * FROM Administrator WHERE Email ='$Email' AND password='$password'";
 	$result = mysqli_query($db, $query);
-	if ( mysql_num_rows($result) ) {
+	$success = false;
+	while ($row = mysqli_fetch_array($result)) { $success = true; }
+	if ($success == true)  {
+
+		$_SESSION['user']=$Email;
 		header('Location: ../testDatabase/test_admin_page.php');
-	}
-	else{
-				header('Location: ../date.php');			}
+}
+	else { echo 'Incorrect login information!'; }
 }
 
+
+
+	// if ( mysql_num_rows($result) ) {
+	// 	header('Location: ../testDatabase/test_admin_page.php');
+	// }
+	// else{
+	// 			header('Location: ../date.php');			}
 
 // if(isset($_POST['submit_edit'])){
 // 	$Email = $_POST['userid']; //echo $username;
