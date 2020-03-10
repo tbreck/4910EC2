@@ -1,12 +1,7 @@
 <!--connect to the database-->
 <?php
 
-$servername = "database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com";
-$username = "admin";
-$password = "CPSC4910Team10";
-$dbAccess = "TestDB.Administrator";
-
-$db = mysqli_connect($servername, $username, $password, $dbAccess)
+$db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10', 'TestDB.Administrator')
 or die('Error connecting to MySQL Server');
 session_start();
 
