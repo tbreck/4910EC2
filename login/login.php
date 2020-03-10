@@ -24,9 +24,8 @@ If(isset($_POST['submit'])){
 	}
 	else{
 				header('Location: ../date.php');			}
-	}
-
 }
+
 
 // if(isset($_POST['submit_edit'])){
 // 	$Email = $_POST['userid']; //echo $username;
