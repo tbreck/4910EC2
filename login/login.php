@@ -13,49 +13,37 @@ If(isset($_POST['new_user'])){
 }
 
 If(isset($_POST['submit'])){
-	$username = $_POST['userid']; //echo $username;
+	$Email = $_POST['userid']; //echo $username;
 	$password = $_POST['password']; //echo $password;
 
 	//SQL query - match username and password
-	$query = "SELECT * FROM users WHERE username ='$username' AND password='$password'";
+	$query = "SELECT * FROM Administrator WHERE Email ='$Email' AND password='$password'";
 	$result = mysqli_query($db, $query);
-	$success = false;
-	while ($row = mysqli_fetch_array($result)) { $success = true; }
-	if ($success == true)  {
-		//echo 'success!';
-		$level = "SELECT level FROM users WHERE username = '$username' limit 1";
-		$clearance = mysqli_query($db, $level);
-		$value = mysqli_fetch_object($clearance);
-		//$_SESSION['myid'] = $value->id;
-		if ($value->level == 1) {header('Location: employee.php');}
-		if ($value->level == 2) {$_SESSION['managerLoggedIn'] = true;
-			header('Location: manager.php');
-
-}
-		if ($value->level == 3) { $_SESSION['adminLoggedIn'] = true;
-			header('Location: admin.php');
-}
+	if ( $result > 0 ) { 
+		header('Location: ../testDatabase/test_admin_page.php');
+	}
+	
 		//header('Location: admin.php');
 }
 	else { echo 'Incorrect login information!'; }
 }
 
-if(isset($_POST['submit_edit'])){
-	$username = $_POST['userid']; //echo $username;
-	$password = $_POST['password']; //echo $password;
+// if(isset($_POST['submit_edit'])){
+// 	$Email = $_POST['userid']; //echo $username;
+// 	$password = $_POST['password']; //echo $password;
 
-	//SQL query - match username and password
-	$query = "SELECT * FROM users WHERE username ='$username' AND password='$password'";
-	$result = mysqli_query($db, $query);
-	$success = false;
-	while ($row = mysqli_fetch_array($result)) { $success = true; }
-	if ($success == true)  {
+// 	//SQL query - match username and password
+// 	$query = "SELECT * FROM users WHERE username ='$username' AND password='$password'";
+// 	$result = mysqli_query($db, $query);
+// 	$success = false;
+// 	while ($row = mysqli_fetch_array($result)) { $success = true; }
+// 	if ($success == true)  {
 
-		$_SESSION['user']=$username;
-		header('Location: user_update.php');
-}
-	else { echo 'Incorrect login information!'; }
-}
+// 		$_SESSION['user']=$username;
+// 		header('Location: user_update.php');
+// }
+// 	else { echo 'Incorrect login information!'; }
+// }
 
 ?>
 
@@ -91,7 +79,7 @@ if(isset($_POST['submit_edit'])){
 
 <div class=center>
   <form method= "post">
-    Username &nbsp; <input type="text" name="userid" placeholder="enter username" required/><br><br>
+    Username &nbsp; <input type="text" Email="userid" placeholder="enter username" required/><br><br>
     Password &nbsp; <input type="password" name="password" placeholder="enter password" required/><br><br>
 
     <input type="submit" name="submit" id="submit" class="button" value="Login"/>  &nbsp;
