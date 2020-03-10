@@ -6,7 +6,9 @@ input{
 </style>
 <title>Driver Registration</title>
 <h1>Register for an Driver account!</h1>
+
 <section>
+    <div  id="error"><p>Enter Info</p></div>
 	<form action="users" method="post" id="form">
 		<div><label>Email:<input type="text" id="email" name="email"/></label><i id="usernameStatus" class="material-icons">done</i></div>
 		<div><label>First Name:<input type="text" id="firstname" name="firstname"/></label></div>
@@ -21,7 +23,6 @@ input{
 		<button type="submit">Submit</button>
 	</form> 
 </section>
-<div  id="error"><p>Enter Info</p></div>
 <script type="text/javascript" src="registration.js"></script>
 <script type="text/javascript" src="../zxcvbn.js"></script>
 <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>

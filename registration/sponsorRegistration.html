@@ -6,7 +6,9 @@ input{
 </style>
 <title>Sponsor Registration</title>
 <h1>Register for an Sponsor account!</h1>
+
 <section>
+    <div  id="error"><p>Enter Info</p></div>
 	<form action="users" method="post" id="form">
 		<div><label>Email:<input type="text" id="email" name="email"/></label><i id="usernameStatus" class="material-icons">done</i></div>
 		<div><label>Company Name:<input type="text" id="companyname" name="companyname"/></label></div>
@@ -23,7 +25,6 @@ input{
 		<button type="submit">Submit</button>
 	</form> 
 </section>
-<div  id="error"><p>Enter Info</p></div>
 <script type="text/javascript" src="registration.js"></script>
 <script type="text/javascript" src="../zxcvbn.js"></script>
 <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
