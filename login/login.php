@@ -1,90 +1,111 @@
+<!--connect to the database-->
 <?php
 
-// $query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
-// 	$result = mysqli_query($db, $query);
-
-
-
-
-echo "Connected successfully";
-console.log("Connected successfully!!!!! \n");
-$Email = $_POST['email']; //echo $email;
-$Password = $_POST['password']; //echo $password;
-echo $Email + "\n";
-echo $Password + "\n";
-
-if ( !empty(Email) || !empty(Password) ) {
-	$servername = "database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com";
-	$username = "admin";
-	$password = "CPSC4910Team10";
-	$db = "TestDB.Administrator";
-
-	// Create connection
-	$conn = mysqli_connect($servername, $username, $password);
-	// Check connection
-	if (mysqli_connect_error()){
-		die('Connect Error ('. mysqli_connect_errno() .') '
-		. mysqli_connect_error());
-		}
-	else {
-		$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
-		$result = mysqli_query($db, $query);
-		if (result) {
-			echo "Success!!!";
-		}
-		else {
-			echo "Fail!!!";
-		}
-	}
-
-} else {
-	echo "All fields are required!";
-	die();
-}
-
-// If(isset($_POST['submit'])){
-// 	$Email = $_POST['email']; //echo $email;
-// 	$Password = $_POST['password']; //echo $password;
-// 	echo $Email + "\n";
-// 	echo $Password + "\n";
-
-//   $query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
-// 	$result = mysqli_query($db, $query);
-
-
-//   if ($result->num_rows > 0) {
-//       // output data of each row
-//       header('Location: date.php');
-
-//   } else {
-//       echo "0 results";
-//   }
-
-// }
-
+$db = mysqli_connect('mysql1.cs.clemson.edu', 'FrwrksWH_n519', 'gopher20lamppost', 'Fireworks_WH_f0tk')
+or die('Error connecting to MySQL Server');
+session_start();
 
 ?>
 
-<!DOCTYPE HTML>
+<?php
+If(isset($_POST['new_user'])){
+	header('Location: new_user.php');
+}
+
+If(isset($_POST['submit'])){
+	$username = $_POST['userid']; //echo $username;
+	$password = $_POST['password']; //echo $password;
+
+	//SQL query - match username and password
+	$query = "SELECT * FROM users WHERE username ='$username' AND password='$password'";
+	$result = mysqli_query($db, $query);
+	$success = false;
+	while ($row = mysqli_fetch_array($result)) { $success = true; }
+	if ($success == true)  {
+		//echo 'success!';
+		$level = "SELECT level FROM users WHERE username = '$username' limit 1";
+		$clearance = mysqli_query($db, $level);
+		$value = mysqli_fetch_object($clearance);
+		//$_SESSION['myid'] = $value->id;
+		if ($value->level == 1) {header('Location: employee.php');}
+		if ($value->level == 2) {$_SESSION['managerLoggedIn'] = true;
+			header('Location: manager.php');
+
+}
+		if ($value->level == 3) { $_SESSION['adminLoggedIn'] = true;
+			header('Location: admin.php');
+}
+		//header('Location: admin.php');
+}
+	else { echo 'Incorrect login information!'; }
+}
+
+if(isset($_POST['submit_edit'])){
+	$username = $_POST['userid']; //echo $username;
+	$password = $_POST['password']; //echo $password;
+
+	//SQL query - match username and password
+	$query = "SELECT * FROM users WHERE username ='$username' AND password='$password'";
+	$result = mysqli_query($db, $query);
+	$success = false;
+	while ($row = mysqli_fetch_array($result)) { $success = true; }
+	if ($success == true)  {
+
+		$_SESSION['user']=$username;
+		header('Location: user_update.php');
+}
+	else { echo 'Incorrect login information!'; }
+}
+
+?>
+
+
 <html>
+
+<style>
+  .center{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
+</style>
+
+<style>
+  .heading{
+    margin: auto;
+    text-align: center;
+  }
+</style>
+
 <head>
-  <title>Register Form</title>
+<title>Warehouse Login</title>
 </head>
+
 <body>
- <form action="login.php" method="POST" id="form">
-  <table>
-   <tr>
-    <td>Email :</td>
-    <td><input type="text" name="email" required></td>
-   </tr>
-   <tr>
-    <td>Password :</td>
-    <td><input type="password" name="password" required></td>
-   </tr>
-   <tr>
-    <td><input type="submit" value="Submit"></td>
-   </tr>
-  </table>
- </form>
+
+<div class=heading>
+  <h2>Fireworks</h2>
+</div>
+
+<div class=center>
+  <form method= "post">
+    Username &nbsp; <input type="text" name="userid" placeholder="enter username" required/><br><br>
+    Password &nbsp; <input type="password" name="password" placeholder="enter password" required/><br><br>
+
+    <input type="submit" name="submit" id="submit" class="button" value="Login"/>  &nbsp;
+    <input type="submit" name="submit_edit" id="submit" class="button" value="Update Account"/>  &nbsp;
+    <input type="reset" value="Cancel"/> &nbsp;
+
+</form>
+</div>
+<div class=center>
+ <form method= "post">
+	<input type="submit" name="new_user" id="new_user" class="button" value="Create User"/>
+</form>
+</div>
+
 </body>
+
 </html>
