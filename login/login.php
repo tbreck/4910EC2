@@ -30,7 +30,7 @@ if ( !empty(Email) || !empty(Password) ) {
 		$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
 		$result = mysqli_query($db, $query);
 		if (result) {
-			echo "Success!!!";
+			echo Email;
 		}
 		else {
 			echo "Fail!!!";
