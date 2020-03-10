@@ -24,7 +24,6 @@ If(isset($_POST['submit'])){
 	}
 	
 		//header('Location: admin.php');
-}
 	else { echo 'Incorrect login information!'; }
 }
 
