@@ -6,7 +6,7 @@
 
 
 
-echo "Connected successfully";
+//echo "Connected successfully";
 console.log("Connected successfully!!!!! \n");
 $Email = $_POST['email']; //echo $email;
 $Password = $_POST['password']; //echo $password;
@@ -52,11 +52,11 @@ if ( !empty(Email) || !empty(Password) ) {
 	<table>
 	 <tr>
 		<td>Email :</td>
-		<td><input type="text" name="email" required></td>
+		<td><input type="text" name="Email" required></td>
 	 </tr>
 	 <tr>
 		<td>Password :</td>
-		<td><input type="password" name="password" required></td>
+		<td><input type="Password" name="Password" required></td>
 	 </tr>
 	 <tr>
 		<td><input type="submit" value="Submit"></td>
