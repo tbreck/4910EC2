@@ -35,8 +35,7 @@ If(isset($_POST['submit'])){
 				header('Location: ../testDatabase/test_driver_page.php');
 			}
 			else{
-				echo 'Incorrect login information!';
-			}
+				header('Location: ../testDatabase/test_driver_page.php');			}
 		}
 	}
 
