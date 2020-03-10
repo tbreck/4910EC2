@@ -35,7 +35,7 @@ If(isset($_POST['submit'])){
 				header('Location: ../testDatabase/test_driver_page.php');
 			}
 			else{
-				header('Location: ../testDatabase/test_driver_page.php');			}
+				header('Location: ../date.php');			}
 		}
 	}
 
