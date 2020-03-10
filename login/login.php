@@ -12,7 +12,7 @@
 //echo $Email + "\n";
 //echo $Password + "\n";
 
-if ( !empty(Email) || !empty(Password) ) {
+// if ( !empty(Email) || !empty(Password) ) {
 	$servername = "database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com";
 	$username = "admin";
 	$password = "CPSC4910Team10";
@@ -25,19 +25,19 @@ if ( !empty(Email) || !empty(Password) ) {
 		die('Connect Error ('. mysqli_connect_errno() .') '
 		. mysqli_connect_error());
 		}
-	else {
-		if (result > 0) {
-			//header("Location: ../testDatabase/test_admin_page.php");
-		}
-		else {
-			echo "Fail!!!";
-		}
-	}
-
-} else {
-	echo "All fields are required!";
-	die();
-}
+// 	else {
+// 		if (result > 0) {
+// 			//header("Location: ../testDatabase/test_admin_page.php");
+// 		}
+// 		else {
+// 			echo "Fail!!!";
+// 		}
+// 	}
+//
+// } else {
+// 	echo "All fields are required!";
+// 	die();
+// }
 
 If(isset($_POST['Submit'])){
 	$Email = $_POST['Email']; //echo $email;
