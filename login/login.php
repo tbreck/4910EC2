@@ -1,7 +1,12 @@
 <!--connect to the database-->
 <?php
 
-$db = mysqli_connect('mysql1.cs.clemson.edu', 'FrwrksWH_n519', 'gopher20lamppost', 'Fireworks_WH_f0tk')
+$servername = "database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com";
+$username = "admin";
+$password = "CPSC4910Team10";
+$dbAccess = "TestDB.Administrator";
+
+$db = mysqli_connect($servername, $username, $password, $dbAccess)
 or die('Error connecting to MySQL Server');
 session_start();
 
@@ -9,7 +14,7 @@ session_start();
 
 <?php
 If(isset($_POST['new_user'])){
-	header('Location: new_user.php');
+	header('Location: ../registration/registration.html');
 }
 
 If(isset($_POST['submit'])){
