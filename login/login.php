@@ -25,7 +25,7 @@ if ( !empty(Email) || !empty(Password) ) {
 	if (mysqli_connect_error()){
 		die('Connect Error ('. mysqli_connect_errno() .') '
 		. mysqli_connect_error());
-		}	
+		}
 	else {
 		$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
 		$result = mysqli_query($db, $query);
@@ -41,6 +41,32 @@ if ( !empty(Email) || !empty(Password) ) {
 	echo "All fields are required!";
 	die();
 }
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Register Form</title>
+</head>
+<body>
+ <form action="login.php" method="POST" id="form">
+	<table>
+	 <tr>
+		<td>Email :</td>
+		<td><input type="text" name="email" required></td>
+	 </tr>
+	 <tr>
+		<td>Password :</td>
+		<td><input type="password" name="password" required></td>
+	 </tr>
+	 <tr>
+		<td><input type="submit" value="Submit"></td>
+	 </tr>
+	</table>
+ </form>
+</body>
+</html>
+
+
 
 // If(isset($_POST['submit'])){
 // 	$Email = $_POST['email']; //echo $email;
