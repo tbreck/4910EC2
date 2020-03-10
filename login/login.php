@@ -13,14 +13,17 @@ If(isset($_POST['new_user'])){
 }
 
 If(isset($_POST['submit'])){
-	$Email = $_POST['userid']; //echo $username;
-	$password = $_POST['password']; //echo $password;
+	$Email = $_POST['emailID']; //echo $username;
+	$Password = $_POST['password']; //echo $password;
 
 	//SQL query - match username and password
-	$query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$password'";
+	$query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
 	$result = mysqli_query($db, $query);
 	if ( mysql_num_rows($result) > 0 ) { header('Location: ../testDatabase/test_admin_page.php'); }
-	else{ header('Location: ../date.php'); }
+	else { 
+		echo 'Incorrect login information!\n'; 
+		echo $Email + '\n' + $Password; 
+	}
 
 }
 
@@ -79,7 +82,7 @@ If(isset($_POST['submit'])){
 
 <div class=center>
   <form method= "post">
-    Username &nbsp; <input type="text" Email="userid" placeholder="enter username" required/><br><br>
+    Username &nbsp; <input type="text" Email="emailID" placeholder="enter username" required/><br><br>
     Password &nbsp; <input type="password" name="password" placeholder="enter password" required/><br><br>
 
     <input type="submit" name="submit" id="submit" class="button" value="Login"/>  &nbsp;
