@@ -31,6 +31,7 @@ if ( !empty(Email) || !empty(Password) ) {
 		$result = mysqli_query($db, $query);
 		if (result) {
 			echo $Email;
+			echo $Password
 		}
 		else {
 			echo "Fail!!!";
