@@ -17,7 +17,7 @@ If(isset($_POST['submit'])){
 	$password = $_POST['password']; //echo $password;
 
 	//SQL query - match username and password
-	$query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND password='$password'";
+	$query = "SELECT * FROM Administrator WHERE Email ='$Email' AND Password='$password'";
 	$result = mysqli_query($db, $query);
 	$success = false;
 	while ($row = mysqli_fetch_array($result)) { $success = true; }
