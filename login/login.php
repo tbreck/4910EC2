@@ -19,27 +19,13 @@ If(isset($_POST['submit'])){
 	//SQL query - match username and password
 	$query = "SELECT * FROM Administrator WHERE Email ='$Email' AND password='$password'";
 	$result = mysqli_query($db, $query);
-	if ( $result ) {
+	if ( mysql_num_rows($result) ) {
 		header('Location: ../testDatabase/test_admin_page.php');
 	}
 	else{
-		$query = "SELECT * FROM Sponsor WHERE Email ='$Email' AND password='$password'";
-		$result = mysqli_query($db, $query);
-		if ( mysqli_num_rows($result) > 0 ) {
-			header('Location: ../testDatabase/test_sponsor_page.php');
-		}
-		else{
-			$query = "SELECT * FROM Driver WHERE Email ='$Email' AND password='$password'";
-			$result = mysqli_query($db, $query);
-			if ( mysqli_num_rows($result) > 0 ) {
-				header('Location: ../testDatabase/test_driver_page.php');
-			}
-			else{
 				header('Location: ../date.php');			}
-		}
 	}
 
-	//header('Location: admin.php');
 }
 
 // if(isset($_POST['submit_edit'])){
