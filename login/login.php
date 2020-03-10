@@ -7,7 +7,7 @@
 
 
 //echo "Connected successfully";
-console.log("Connected successfully!!!!! \n");
+//console.log("Connected successfully!!!!! \n");
 $Email = $_POST['email']; //echo $email;
 $Password = $_POST['password']; //echo $password;
 echo $Email + "\n";
