@@ -8,8 +8,8 @@
 
 //echo "Connected successfully";
 //console.log("Connected successfully!!!!! \n");
-$Email = $_POST['email']; //echo $email;
-$Password = $_POST['password']; //echo $password;
+$Email = $_POST['Email']; //echo $email;
+$Password = $_POST['Password']; //echo $password;
 echo $Email + "\n";
 echo $Password + "\n";
 
