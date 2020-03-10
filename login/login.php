@@ -46,6 +46,7 @@ If(isset($_POST['Submit'])){
 	//SQL query - match username and password
 	$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
 	$result = mysqli_query($db, $query);
+	echo $result;
 	if ($result > 0)  {
 		header('Location: ../testDatabase/test_admin_page.php');
 		}
