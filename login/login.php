@@ -50,12 +50,6 @@ If(isset($_POST['Submit'])){
 	if ($result > 0)  {
 		header('Location: ../testDatabase/test_admin_page.php');
 		}
-
-		if ($value->level == 3) { $_SESSION['adminLoggedIn'] = true;
-			header('Location: admin.php');
-		}
-		//header('Location: admin.php');
-	}
 	else { echo 'Incorrect login information!';
 	}
 
