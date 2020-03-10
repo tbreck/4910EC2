@@ -1,7 +1,7 @@
 <!--connect to the database-->
 <?php
 
-$db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10')
+$db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10', 'TestDB')
 or die('Error connecting to MySQL Server');
 session_start();
 
