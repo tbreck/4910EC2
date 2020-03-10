@@ -34,11 +34,13 @@ If(isset($_POST['submit'])){
 			if ( $result > 0 ) {
 				header('Location: ../testDatabase/test_driver_page.php');
 			}
+			else{
+				echo 'Incorrect login information!';
+			}
 		}
 	}
 
 	//header('Location: admin.php');
-  echo 'Incorrect login information!';
 }
 
 // if(isset($_POST['submit_edit'])){
