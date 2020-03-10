@@ -39,19 +39,19 @@
 // 	die();
 // }
 
-// If(isset($_POST['Submit'])){
-// 	$Email = $_POST['Email']; //echo $email;
-// 	$Password = $_POST['Password']; //echo $password;
-//
-// 	//SQL query - match username and password
-// 	$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
-// 	$result = mysqli_query($db, $query);
-// 	//echo $result;
-// 	if ($result > 0)  {
-// 		header('Location: ../testDatabase/test_admin_page.php');
-// 		}
-// 	else { echo 'Incorrect login information!';
-// 	}
+If(isset($_POST['Submit'])){
+	$Email = $_POST['Email']; //echo $email;
+	$Password = $_POST['Password']; //echo $password;
+
+	//SQL query - match username and password
+	$query = "SELECT * FROM $db WHERE Email ='$Email' AND Password='$Password'";
+	$result = mysqli_query($db, $query);
+	//echo $result;
+	if ($result > 0)  {
+		header('Location: ../testDatabase/test_admin_page.php');
+		}
+	else { echo 'Incorrect login information!';
+	}
 
 
 
@@ -95,7 +95,7 @@
 		<td><input type="Password" name="Password" required></td>
 	 </tr>
 	 <tr>
-		<td><input type="submit" value="Submit"></td>
+		<td><input type="Submit" value="Submit"></td>
 	 </tr>
 	</table>
  </form>
