@@ -22,8 +22,7 @@ If(isset($_POST['submit'])){
 	$result = mysqli_query($db, $query);
 	if ( mysqli_num_rows($result) ) { header('Location: ../testDatabase/test_admin_page.php'); }
 	else { 
-		echo 'Incorrect login information!\n'; 
-		echo $Email + '\n' + $Password; 
+		echo 'Incorrect login information!';
 	}
 
 }
