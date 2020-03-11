@@ -23,6 +23,20 @@ if(isset($_SESSION['name'])){
 		echo "Hi ".$_SESSION['name']."! \n\n\n";
 	}
 ?>
+<style>
+	.button {
+	background-color: #1c87c9;
+	border: none;
+	color: white;
+	padding: 20px 34px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+ </style>
 	Go <a href="login/login.html">here to login</a> or <a href="registration/registration.html">here to register</a>.
   <!-- <a href="testDatabase/test_driver_page.php">Click here to test driver page!</a>
 	<a href="testDatabase/test_sponsor_page.php">Click here to test sponsor page!</a>
