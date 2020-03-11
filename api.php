@@ -90,6 +90,7 @@ function authUser($username,$password){
 	return true;
 }
 
+
 //create the slim app
 $app = new \Slim\App;
 
