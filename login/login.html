@@ -1,23 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>Register Form</title>
+<!DOCTYPE html>
+<style type="text/css">
+input{
+	margin-bottom:15px;
+}
+</style>
+<title>Login</title>
+<h1>Login to an account!</h1>
+<style>
+	.button {
+	background-color: #1c87c9;
+	border: none;
+	color: white;
+	padding: 20px 34px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 4px 2px;
+	cursor: pointer;
+	}
+ </style>
 </head>
 <body>
- <form action="login.php" method="POST" id="form">
-  <table>
-   <tr>
-    <td>Email :</td>
-    <td><input type="text" name="email" required></td>
-   </tr>
-   <tr>
-    <td>Password :</td>
-    <td><input type="password" name="password" required></td>
-   </tr>
-   <tr>
-    <td><input type="submit" value="Submit"></td>
-   </tr>
-  </table>
- </form>
+ <a href="driverRegistration.html" class="button">Login as Driver</a>
+ <a href="sponsorRegistration.html" class="button">Login as Sponsor</a>
+ <a href="adminLogin.php" class="button">Login as Admin</a>
 </body>
-</html>

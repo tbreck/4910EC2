@@ -23,10 +23,10 @@ if(isset($_SESSION['name'])){
 		echo "Hi ".$_SESSION['name']."! \n\n\n";
 	}
 ?>
-	Go <a href="login/login.php">here to login</a> or <a href="registration/registration.html">here to register</a>.
-  <a href="testDatabase/test_driver_page.php">Click here to test driver page!</a>
+	Go <a href="login/login.html">here to login</a> or <a href="registration/registration.html">here to register</a>.
+  <!-- <a href="testDatabase/test_driver_page.php">Click here to test driver page!</a>
 	<a href="testDatabase/test_sponsor_page.php">Click here to test sponsor page!</a>
-	<a href="testDatabase/test_admin_page.php">Click here to test admin page!</a>
+	<a href="testDatabase/test_admin_page.php">Click here to test admin page!</a> -->
 	</p>
 </section>
 <!--

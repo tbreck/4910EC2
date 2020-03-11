@@ -18,35 +18,15 @@ If(isset($_POST['submit'])){
 	$Password = $_POST['password']; //echo $password;
 
 	//SQL query - match username and password
-	$query = "SELECT * FROM TestDB.Administrator WHERE Email ='$Email' AND Password='$Password'";
+	$query = "SELECT * FROM TestDB.Sponsor WHERE Email ='$Email' AND Password='$Password'";
 	$result = mysqli_query($db, $query);
-	if ( mysqli_num_rows($result) ) { header('Location: ../testDatabase/test_admin_page.php'); }
+	if ( mysqli_num_rows($result) ) { header('Location: ../testDatabase/test_sponsor_page.php'); }
 	else { 
 		echo 'Incorrect login information!';
 	}
 
 }
 
-
-
-
-
-// if(isset($_POST['submit_edit'])){
-// 	$Email = $_POST['userid']; //echo $username;
-// 	$password = $_POST['password']; //echo $password;
-
-// 	//SQL query - match username and password
-// 	$query = "SELECT * FROM users WHERE username ='$username' AND password='$password'";
-// 	$result = mysqli_query($db, $query);
-// 	$success = false;
-// 	while ($row = mysqli_fetch_array($result)) { $success = true; }
-// 	if ($success == true)  {
-
-// 		$_SESSION['user']=$username;
-// 		header('Location: user_update.php');
-// }
-// 	else { echo 'Incorrect login information!'; }
-// }
 
 ?>
 
@@ -71,13 +51,13 @@ If(isset($_POST['submit'])){
 </style>
 
 <head>
-<title>Warehouse Login</title>
+<title>Sponsor Login</title>
 </head>
 
 <body>
 
 <div class=heading>
-  <h2>Fireworks</h2>
+  <h2>Sponsor</h2>
 </div>
 
 <div class=center>
