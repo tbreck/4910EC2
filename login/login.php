@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 <?php
 If(isset($_POST['submit'])){
-    $Email = $_POST['emailID']; echo $Email;
+    $Email = $_POST['emailID']; //echo $username;
     $Password = $_POST['password']; //echo $password;
 
     //SQL query - match username and password
@@ -32,10 +32,10 @@ If(isset($_POST['submit'])){
             Driver.Password AS Password,
             'Driver' AS From_Table
         FROM
-            Driver)
-    WHERE Email =$Email AND Password=$Password";
+            Driver)";
+    //WHERE Email =$Email AND Password=$Password";
     $result = mysqli_query($db, $query);
-
+    echo $result;
     if ( !mysqli_num_rows($result) ){
         echo 'Incorrect login information!';
     }
