@@ -33,9 +33,9 @@ If(isset($_POST['submit'])){
             'Driver' AS From_Table
         FROM
             Driver)";
-    //WHERE Email =$Email AND Password=$Password";
+    WHERE Email =$Email AND Password=$Password";
     $result = mysqli_query($db, $query);
-    
+
     if ( !mysqli_num_rows($result) ){
         echo 'Incorrect login information!';
     }
