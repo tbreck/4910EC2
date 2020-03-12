@@ -17,6 +17,6 @@
 	}
 	</style>
 <body>
- <a href="login/login.html" class="button">Login</a>
+ <a href="login/login.php" class="button">Login</a>
  <a href="registration/registration.html" class="button">Register</a>
 </body>
