@@ -35,7 +35,7 @@ If(isset($_POST['submit'])){
             Driver)";
     //WHERE Email =$Email AND Password=$Password";
     $result = mysqli_query($db, $query);
-    echo $result;
+    
     if ( !mysqli_num_rows($result) ){
         echo 'Incorrect login information!';
     }
