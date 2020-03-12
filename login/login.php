@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 <?php
 If(isset($_POST['submit'])){
-    $Email = $_POST['emailID']; //echo $username;
+    $Email = $_POST['emailID']; echo $Email;
     $Password = $_POST['password']; //echo $password;
 
     //SQL query - match username and password
