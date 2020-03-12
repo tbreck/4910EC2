@@ -16,24 +16,24 @@ If(isset($_POST['submit'])){
 
     //SQL query - match username and password
     $query = "(SELECT
-            `Administrator`.`Email` AS `Email`,
-            `Administrator`.`Password` AS `Password`,
-            'Admin' AS `From_Table`
+            Administrator.Email AS Email,
+            Administrator.Password AS Password,
+            'Admin' AS From_Table
         FROM
-            `Administrator`)
+            Administrator)
     UNION (SELECT
-            `Sponsor`.`Email` AS `Email`,
-            `Sponsor`.`Password` AS `Password`,
-            'Sponsor' AS `From_Table`
+            Sponsor.Email AS Email,
+            Sponsor.Password AS Password,
+            'Sponsor' AS From_Table
         FROM
-            `Sponsor`)
+            Sponsor)
     UNION (SELECT
-            `Driver`.`Email` AS `Email`,
-            `Driver`.`Password` AS `Password`,
-            'Driver' AS `From_Table`
+            Driver.Email AS Email,
+            Driver.Password AS Password,
+            'Driver' AS From_Table
         FROM
-            `Driver`)
-    WHERE Email ='$Email' AND Password='$Password'";
+            Driver)
+    WHERE Email =$Email AND Password=$Password";
     $result = mysqli_query($db, $query);
 
     if ( !mysqli_num_rows($result) ){
