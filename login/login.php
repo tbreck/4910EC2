@@ -35,7 +35,10 @@ If(isset($_POST['submit'])){
             Driver)
     WHERE Email ='$Email' AND Password='$Password'";
     $result = mysqli_query($db, $query);
-
+    while($row = mysql_fetch_array($result)) {
+        echo $row['column_name']; // Print a single column data
+        echo print_r($row);       // Print the entire row data
+    }
     if ( !mysqli_num_rows($result) ){
         echo 'Incorrect login information!';
     }
