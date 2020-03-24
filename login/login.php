@@ -76,13 +76,13 @@ If(isset($_POST['submit'])){
 </style>
 
 <head>
-<title>Admin Login</title>
+<title>Any Login</title>
 </head>
 
 <body>
 
 <div class=heading>
-  <h2>Admin</h2>
+  <h2>Any</h2>
 </div>
 
 <div class=center>
