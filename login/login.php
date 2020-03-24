@@ -46,6 +46,7 @@ If(isset($_POST['submit'])){
     }
 
     $userType = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    echo $userType;
 /*
     if ( $userType["From_Table"] == "Driver"){
         header('Location: ../testDatabase/test_driver_page.php');
