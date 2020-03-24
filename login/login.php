@@ -14,8 +14,8 @@ If(isset($_POST['submit'])){
     $Email = $_POST['emailID']; //echo $username;
     $Password = $_POST['password']; //echo $password;
 
-    echo $Email;
-    echo $Password;
+    echo $Email; //TEST
+    echo $Password; //TEST
 
     //SQL query - match username and password
     $query = "(SELECT
@@ -46,7 +46,11 @@ If(isset($_POST['submit'])){
     }
 
     $userType = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    echo $userType;
+    echo $userType; //TEST
+
+    foreach($userType['data'] as $userType) {
+	echo $userType['type'], '<br>';
+    }
 /*
     if ( $userType["From_Table"] == "Driver"){
         header('Location: ../testDatabase/test_driver_page.php');
