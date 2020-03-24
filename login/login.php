@@ -15,7 +15,7 @@ If(isset($_POST['submit'])){
     $Password = $_POST['password']; //echo $password;
 
     echo $Email;
-    ehco $Password;
+    echo $Password;
 
     //SQL query - match username and password
     $query = "(SELECT
