@@ -14,6 +14,9 @@ If(isset($_POST['submit'])){
     $Email = $_POST['emailID']; //echo $username;
     $Password = $_POST['password']; //echo $password;
 
+    echo $Email;
+    ehco $Password;
+
     //SQL query - match username and password
     $query = "(SELECT
             Administrator.Email AS Email,
