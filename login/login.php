@@ -20,20 +20,22 @@ If(isset($_POST['submit'])){
             Administrator.Password AS Password,
             'Admin' AS From_Table
         FROM
-            Administrator)
+            Administrator
+	WHERE Email ='$Email' AND Password ='$Password')
     UNION (SELECT
             Sponsor.Email AS Email,
             Sponsor.Password AS Password,
             'Sponsor' AS From_Table
         FROM
-            Sponsor)
+            Sponsor
+	WHERE Email ='$Email' AND Password ='$Password')
     UNION (SELECT
             Driver.Email AS Email,
             Driver.Password AS Password,
             'Driver' AS From_Table
         FROM
-            Driver)
-    WHERE Email ='$Email' AND Password='$Password'";
+            Driver
+	WHERE Email ='$Email' AND Password ='$Password')";
     $result = mysqli_query($db, $query);
 
     if ( !mysqli_num_rows($result) ){
