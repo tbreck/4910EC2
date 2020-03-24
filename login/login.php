@@ -50,8 +50,6 @@ If(isset($_POST['submit'])){
         header('Location: ../testDatabase/test_sponsor_page.php');
     }else if ( $userType["From_Table"] == "Admin"){
         header('Location: ../testDatabase/test_admin_page.php');
-    }else{
-        echo 'Error with account typing!';
     }
 
 }
