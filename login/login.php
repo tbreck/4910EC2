@@ -43,9 +43,7 @@ If(isset($_POST['submit'])){
     }
 
     $userType = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    echo $userType; //TEST
-    echo $userType[0];
-/*
+
     if ( $userType["From_Table"] == "Driver"){
         header('Location: ../testDatabase/test_driver_page.php');
     }else if ( $userType["From_Table"] == "Sponsor"){
@@ -55,7 +53,7 @@ If(isset($_POST['submit'])){
     }else{
         echo 'Error with account typing!';
     }
-*/
+
 }
 ?>
 
