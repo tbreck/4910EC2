@@ -1,0 +1,14 @@
+@charset "utf-8";
+#header {
+}
+#header h1 {
+    text-align: left;
+    font-family: homenaje;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    font-size: 42pt;
+    background-color: #000000;
+    color: #969696;
+    background-size: 0pt 0pt;
+}
