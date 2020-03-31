@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
 
 <?php
-If(isset($_POST['LoginPageLoginButton'])){
+If(isset($_POST['submit'])){
     $Email = $_POST['emailID']; //echo $username;
     $Password = $_POST['password']; //echo $password;
 
@@ -108,8 +108,8 @@ body {
 
     <div id="LoginPageBox">
 		<h1 id="LoginPageLoginHeader">Login</h1>
-		<input type="text" class="form-control" id="emailID" placeholder = "Email">
-		<input type="text" class="form-control" id="password" placeholder = "Password">
+		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
+		<input type="text" class="form-control" id="LoginoNamePasswordButton" placeholder = "Password">
 		<button type="button" id="LoginPageLoginButton">Login</button>
 		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
 	</div>
@@ -119,5 +119,6 @@ body {
 <script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPagePopper.js"></script>
 
 </body>
+
 
 </html>
