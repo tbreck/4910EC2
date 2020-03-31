@@ -18,19 +18,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="~/login/login.php">Catalog <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Catalog <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="~/login/login.php">Account <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Account <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="~/login/login.php">Points <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Points <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="~/login/login.php">Settings <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Settings <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="~/login/login.php">Your Cart <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Your Cart <span class="sr-only">(current)</span></a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
