@@ -5,7 +5,7 @@ $db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', '
 or die('Error connecting to MySQL Server');
 session_start();
 error_reporting(E_ALL);
-echo("Testing\n")
+
 ?>
 
 
@@ -45,11 +45,11 @@ If(isset($_POST['LoginPageLoginButton'])){
     $userType = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     if ( $userType["From_Table"] == "Driver"){
-        header('Location: ../AdobeDreamweaverProfilePages/FreshStartProfile.html');
+        header('Location: ../AdobeDreamweaverLoginPage/LoginPage.html');
     }else if ( $userType["From_Table"] == "Sponsor"){
-        header('Location: ../AdobeDreamweaverProfilePages/FreshStartProfileSponsor.html');
+        header('Location: ../AdobeDreamweaverLoginPage/LoginPageSponsor.html');
     }else if ( $userType["From_Table"] == "Admin"){
-        header('Location: ../AdobeDreamweaverProfilePages/FreshStartProfileAdmin.html');
+        header('Location: ../AdobeDreamweaverLoginPage/LoginPageAdmin.html');
     }
 
 }
@@ -83,19 +83,19 @@ body {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Catalog <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Account <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Account <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Points <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Points <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Settings <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Settings <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Your Cart <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/login/login.php">Your Cart <span class="sr-only">(current)</span></a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -110,8 +110,7 @@ body {
 		<h1 id="LoginPageLoginHeader">Login</h1>
 		<input type="text" class="form-control" id="emailID" placeholder = "Email">
 		<input type="text" class="form-control" id="password" placeholder = "Password">
-	  <button type="button" id="LoginPageLoginButton">Login</button>
-
+		<button type="button" id="LoginPageLoginButton">Login</button>
 		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
 	</div>
 
