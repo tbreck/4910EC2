@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 <?php
 If(isset($_POST['submit'])){
     $Email = $_POST['LoginPageUsernameButton']; //echo $username;
-    $Password = $_POST['LoginoPasswordButton']; //echo $password;
+    $Password = $_POST['LoginoNamePasswordButton']; //echo $password;
 
     //SQL query - match username and password
     $query = "(SELECT
