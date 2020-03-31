@@ -5,7 +5,7 @@ $db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', '
 or die('Error connecting to MySQL Server');
 session_start();
 error_reporting(E_ALL);
-echo("Testing\n")
+
 ?>
 
 
@@ -110,9 +110,7 @@ body {
 		<h1 id="LoginPageLoginHeader">Login</h1>
 		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
 		<input type="text" class="form-control" id="LoginoNamePasswordButton" placeholder = "Password">
-		<!-- <button type="button" id="LoginPageLoginButton">Login</button> -->
-    <input type="submit" name="submit" id="submit" class="button" value="Login"/>  &nbsp;
-
+		<button type="button" id="LoginPageLoginButton">Login</button>
 		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
 	</div>
 
