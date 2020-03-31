@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
 
 <?php
-If(isset($_POST['submit'])){
+If(isset($_POST['LoginPageLoginButton'])){
     $Email = $_POST['emailID']; //echo $username;
     $Password = $_POST['password']; //echo $password;
 
