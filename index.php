@@ -24,7 +24,7 @@
               <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfileSponsor.html">Points <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html">Points <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
               <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Settings <span class="sr-only">(current)</span></a>
