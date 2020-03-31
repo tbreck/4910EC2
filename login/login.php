@@ -45,11 +45,11 @@ If(isset($_POST['submit'])){
     $userType = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     if ( $userType["From_Table"] == "Driver"){
-        header('Location: ../testDatabase/test_driver_page.php');
+        header('Location: ../AdobeDreamweaverLoginPage/LoginPage.html');
     }else if ( $userType["From_Table"] == "Sponsor"){
-        header('Location: ../testDatabase/test_sponsor_page.php');
+        header('Location: ../AdobeDreamweaverLoginPage/LoginPageSponsor.html');
     }else if ( $userType["From_Table"] == "Admin"){
-        header('Location: ../testDatabase/test_admin_page.php');
+        header('Location: ../AdobeDreamweaverLoginPage/LoginPageAdmin.html');
     }
 
 }
