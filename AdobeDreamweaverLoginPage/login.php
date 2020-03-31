@@ -86,13 +86,13 @@ body {
               <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile">Account <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
               <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfileSponsor.html">Points <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfileAdmin.html">Settings <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Settings <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
               <a class="nav-link" href="/AdobeDreamweaverSettingsPage/SettingsPage.html">Your Cart <span class="sr-only">(current)</span></a>
