@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 
 
 <?php
-If(isset($_POST['LoginPageLoginButton'])){
+If(isset($_POST['submit'])){
     $Email = $_POST['emailID']; //echo $username;
     $Password = $_POST['password']; //echo $password;
 
@@ -83,19 +83,19 @@ body {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/login/login.php">Catalog <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/login/login.php">Account <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Account <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/login/login.php">Points <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Points <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/login/login.php">Settings <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Settings <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/login/login.php">Your Cart <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Your Cart <span class="sr-only">(current)</span></a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -108,16 +108,17 @@ body {
 
     <div id="LoginPageBox">
 		<h1 id="LoginPageLoginHeader">Login</h1>
-		<input type="text" class="form-control" id="emailID" placeholder = "Email">
-		<input type="text" class="form-control" id="password" placeholder = "Password">
+		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
+		<input type="text" class="form-control" id="LoginoNamePasswordButton" placeholder = "Password">
 		<button type="button" id="LoginPageLoginButton">Login</button>
 		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
 	</div>
 
-  <script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPageBootstrap.js"></script>
-  <script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPageJQuery.min.js"></script>
-  <script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPagePopper.js"></script>
+<script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPageBootstrap.js"></script>
+<script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPageJQuery.min.js"></script>
+<script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPagePopper.js"></script>
 
 </body>
+</html>
 
 </html>
