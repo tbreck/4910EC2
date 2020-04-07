@@ -2,7 +2,8 @@
 require_once './vendor/autoload.php';
  
 // Create the SMTP Transport
-$transport = (new Swift_SmtpTransport('smtp.hostname', 25))
+$transport = new Swift_SmtpTransport('smtp.gmail.com', 587, 'tls');
+$transport
 	 ->setUsername('cpsc4910@gmail.com')
          ->setPassword('CPSC4910Team10');
 
