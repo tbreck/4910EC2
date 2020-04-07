@@ -11,14 +11,13 @@
         ],
         'To' => [
           [
-            'Email' => "tbrecke@clemson.edu",
-            'Name' => "Tanner"
+            'Email' => "btmeado@clemson.edu",
+            'Name' => "Ben Meadows"
           ]
         ],
-        'Subject' => "Greetings from Mailjet.",
-        'TextPart' => "My first Mailjet email",
-        'HTMLPart' => "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
-        'CustomID' => "AppGettingStartedTest"
+        'Subject' => "New Password",
+        'TextPart' => "This is a randomly generated password for you.",
+        'CustomID' => "NewPassword"
       ]
     ]
   ];
