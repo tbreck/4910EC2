@@ -86,7 +86,7 @@ body {
             <a class="nav-link" href="etsytest.php">Catalog <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverProfliePages/FreshStartProfile.html">Account <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Account <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
             <a class="nav-link" href="/AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html">Points <span class="sr-only">(current)</span></a>
