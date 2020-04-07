@@ -111,7 +111,7 @@ body {
 		<h1 id="LoginPageLoginHeader">Login</h1>
 		<input type="text" class="form-control" id="LoginPageUsername" placeholder = "Email">
 		<input type="text" class="form-control" id="LoginPagePassword" placeholder = "Password">
-		<input type="submit" id="LoginPageLoginButton">Login</button>
+		<input type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Login</button>
 		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
 	</form>
 	</div>
