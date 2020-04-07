@@ -11,8 +11,8 @@ error_reporting(E_ALL);
 
 <?php
 If(isset($_POST['LoginPageLoginButton'])){
-    $Email = $_POST['LoginPageUsernameButton']; //echo $username;
-    $Password = $_POST['LoginoNamePasswordButton']; //echo $password;
+    $Email = $_POST['LoginPageUsername']; //echo $username;
+    $Password = $_POST['LoginPagePassword']; //echo $password;
 
     //SQL query - match username and password
     $query = "(SELECT
@@ -107,11 +107,13 @@ body {
   </nav>
 
     <div id="LoginPageBox">
+	<form method= "post">
 		<h1 id="LoginPageLoginHeader">Login</h1>
-		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
-		<input type="text" class="form-control" id="LoginoNamePasswordButton" placeholder = "Password">
-		<button type="button" id="LoginPageLoginButton">Login</button>
+		<input type="text" class="form-control" id="LoginPageUsername" placeholder = "Email">
+		<input type="text" class="form-control" id="LoginPagePassword" placeholder = "Password">
+		<input type="submit" id="LoginPageLoginButton">Login</button>
 		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
+	</form>
 	</div>
 
 <script type="text/javascript" src="AdobeDreamweaverLoginPage/js/LoginPageBootstrap.js"></script>
