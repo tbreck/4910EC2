@@ -1,6 +1,7 @@
 {
     "require": {
         "slim/slim": "^3.0",
-        "swiftmailer/swiftmailer": "^6.0"
+        "swiftmailer/swiftmailer": "^6.0",
+        "mailjet/mailjet-apiv3-php": "^1.4"
     }
 }
