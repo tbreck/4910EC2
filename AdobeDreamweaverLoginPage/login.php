@@ -83,10 +83,10 @@ body {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="etsytest.php">Catalog <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/AdobeDreamweaverProfliePages/FreshStartProfile.html">Account <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
             <a class="nav-link" href="/AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html">Points <span class="sr-only">(current)</span></a>
@@ -111,8 +111,8 @@ body {
 		<h1 id="LoginPageLoginHeader">Login</h1>
 		<input type="text" class="form-control" id="LoginPageUsername" name="LoginPageUsername" placeholder = "Email">
 		<input type="text" class="form-control" id="LoginPagePassword" name="LoginPagePassword" placeholder = "Password">
-		<input type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Login</button>
-		<button type="button" id="LoginPageForgotButton">Forgot Password?</button>
+		<button type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Login</button>
+		<button type="submit" id="LoginPageForgotButton" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Forgot Password?</button>
 	</form>
 	</div>
 
