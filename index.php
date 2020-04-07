@@ -21,16 +21,16 @@
               <a class="nav-link" href="etsytest.php">Catalog <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Account <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Points <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Points <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Settings <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverSettingsPage/SettingsPage.html">Settings <span class="sr-only">(current)</span></a>
             </li>
 			  <li class="nav-item active">
-              <a class="nav-link" href="/AdobeDreamweaverSettingsPage/SettingsPage.html">Your Cart <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Your Cart <span class="sr-only">(current)</span></a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
