@@ -7,6 +7,29 @@ error_reporting(E_ALL);
 
 ?>
 
+<?php
+If(isset($_POST['LoginPageLoginButton'])){
+	$Email = $_POST['LoginPageUsername'];
+	$FirstName = $_POST['RegisterDriverFirstName'];
+	$LastName = $_POST['RegisterDriverLastName'];
+	$Address = $_POST['RegisterDriverAddress'];
+	$Password = $_POST['LoginNamePassword'];
+	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
+
+	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password)
+		  VALUES ($Email, $FirstName, $LastName, $Address, $Password)";
+
+	$result = mysqli_query($db, $query);
+	if(mysqli_query($db, $query) == TRUE){
+		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html');
+	}else{
+		echo("Registration Failed!");
+	}
+
+}
+
+?>
+
 <html>
 <html lang="en">
 <head>
@@ -57,13 +80,13 @@ body {
 	
     <div id="LoginPageBox">
 		<h1 id="LoginPageLoginHeader">Register for a Driver Account!</h1>
-		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
-		<input type="text" class="form-control" id="RegisterDriverFirstNameButton" placeholder = "First Name">
-		<input type="text" class="form-control" id="RegisterDriverLastNameButton" placeholder = "Last Name">
-		<input type="text" class="form-control" id="RegisterDriverAddressButton" placeholder = "Address">
-		<input type="text" class="form-control" id="LoginoNamePasswordButton" placeholder = "Password">
-		<input type="text" class="form-control" id="LoginoNameConfirmPasswordButton" placeholder = "Confirm Password">
-		<button type="button" id="LoginPageLoginButton">Submit</button>
+		<input type="text" class="form-control" id="LoginPageUsernameButton" name="LoginPageUsername" placeholder = "Email">
+		<input type="text" class="form-control" id="RegisterDriverFirstNameButton" name="RegisterDriverFirstName" placeholder = "First Name">
+		<input type="text" class="form-control" id="RegisterDriverLastNameButton" name="RegisterDriverLastName" placeholder = "Last Name">
+		<input type="text" class="form-control" id="RegisterDriverAddressButton" name="RegisterDriverAddress" placeholder = "Address">
+		<input type="text" class="form-control" id="LoginNamePasswordButton" name="LoginNamePassword" placeholder = "Password">
+		<input type="text" class="form-control" id="LoginNameConfirmPasswordButton" name="LoginNameConfirmPassword" placeholder = "Confirm Password">
+		<button type="button" id="LoginPageLoginButton" name="LoginPageLoginButton">Submit</button>
 	</div>
 	
 <script type="text/javascript" src="js/RegisterDriverPageBootstrap.js"></script>
