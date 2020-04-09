@@ -79,6 +79,7 @@ body {
     </nav>
 	
     <div id="LoginPageBox">
+	<form method = "post">
 		<h1 id="LoginPageLoginHeader">Register for a Driver Account!</h1>
 		<input type="text" class="form-control" id="LoginPageUsernameButton" name="LoginPageUsername" placeholder = "Email">
 		<input type="text" class="form-control" id="RegisterDriverFirstNameButton" name="RegisterDriverFirstName" placeholder = "First Name">
@@ -86,7 +87,8 @@ body {
 		<input type="text" class="form-control" id="RegisterDriverAddressButton" name="RegisterDriverAddress" placeholder = "Address">
 		<input type="text" class="form-control" id="LoginNamePasswordButton" name="LoginNamePassword" placeholder = "Password">
 		<input type="text" class="form-control" id="LoginNameConfirmPasswordButton" name="LoginNameConfirmPassword" placeholder = "Confirm Password">
-		<button type="button" id="LoginPageLoginButton" name="LoginPageLoginButton">Submit</button>
+		<button type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Submit</button>
+	</form>
 	</div>
 	
 <script type="text/javascript" src="js/RegisterDriverPageBootstrap.js"></script>
