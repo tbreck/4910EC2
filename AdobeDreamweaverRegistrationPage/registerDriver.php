@@ -16,8 +16,8 @@ If(isset($_POST['LoginPageLoginButton'])){
 	$Password = $_POST['LoginNamePassword'];
 	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
 
-	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password)
-		  VALUES ($Email, $FirstName, $LastName, $Address, $Password)";
+	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password, Driver_ID)
+		  VALUES ($Email, $FirstName, $LastName, $Address, $Password, 11)";
 
 	$result = mysqli_query($db, $query);
 	if(mysqli_query($db, $query) == TRUE){
