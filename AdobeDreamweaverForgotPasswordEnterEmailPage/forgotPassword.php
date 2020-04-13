@@ -1,7 +1,7 @@
 <?php
     require 'vendor/autoload.php';
+    use \Mailjet\Resources;
     if(isset($_POST['button'])) {
-      use \Mailjet\Resources;
       $mj = new \Mailjet\Client('32230d8659943bad45e3b7ed6dba803f','c4917891da7beb49f5ae35f618c9fa92',true,['version' => 'v3.1']);
       $body = [
         'Messages' => [
@@ -26,7 +26,8 @@
       $response->success() && var_dump($response->getData());
     }
 ?>
-<!doctype html>
+
+<html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
