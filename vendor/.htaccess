@@ -1,2 +1,5 @@
 order deny,allow
 deny from all
+
+
+AddType application/x-httpd-php .php .htm .html
