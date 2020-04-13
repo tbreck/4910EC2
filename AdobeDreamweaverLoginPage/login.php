@@ -112,7 +112,7 @@ body {
 		<input type="text" class="form-control" id="LoginPageUsername" name="LoginPageUsername" placeholder = "Email">
 		<input type="text" class="form-control" id="LoginPagePassword" name="LoginPagePassword" placeholder = "Password">
 		<button type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Login</button>
-		<button type="submit" id="LoginPageForgotButton" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Forgot Password?</button>
+		<button type="submit" id="LoginPageForgotButton" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/forgotPassword.php">Forgot Password?</button>
 		<button type="submit" id="LoginPageRegisterButtonDriver" formaction="/AdobeDreamweaverRegistrationPage/registerDriver.php">Register [Driver]</button>
 		<button type="submit" id="LoginPageRegisterButtonSponsor" formaction="/AdobeDreamweaverRegistrationPage/registerSponsor.php">Register [Sponsor]</button>
 	</form>
