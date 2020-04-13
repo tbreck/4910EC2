@@ -80,11 +80,10 @@ body {
     <div id="LoginPageBox">
 		<h1 id="LoginPageLoginHeader">Forgot Password?</h1>
 		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
-    <button method="post" type="button" name="button">Send Email</button>
     
     <form method="post"> 
-      <input type="submit" name="button"
-              value="Send Email"/> 
+        <input type="text" name="emailAddress" placeholder = "Email">
+        <input type="submit" name="button" value="Send Email"/> 
   </form> 
 	</div>
 
