@@ -23,6 +23,7 @@
         ]
       ];
       $response = $mj->post(Resources::$Email, ['body' => $body]);
+      echo "Password sent!";
       $response->success() && var_dump($response->getData());
     }
 ?>
