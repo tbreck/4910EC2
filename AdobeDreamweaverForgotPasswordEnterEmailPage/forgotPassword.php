@@ -82,7 +82,7 @@ body {
 		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
     
     <form method="post"> 
-        <input type="text" name="emailAddress" placeholder = "Email">
+        <input type="text" name="emailAddress" placeholder = "Email"/>
         <input type="submit" name="button" value="Send Email"/> 
   </form> 
 	</div>
