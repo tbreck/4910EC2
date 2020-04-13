@@ -11,8 +11,8 @@
         ],
         'To' => [
           [
-            'Email' => "btmeado@clemson.edu",
-            'Name' => "Ben Meadows"
+            'Email' => "tbrecke@clemson.edu",
+            'Name' => "Tanner Breckenridge"
           ]
         ],
         'Subject' => "New Password",
