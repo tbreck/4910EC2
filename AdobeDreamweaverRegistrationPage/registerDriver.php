@@ -17,7 +17,7 @@ If(isset($_POST['LoginPageLoginButton'])){
 	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
 
 	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password)
-		  VALUES ($Email, $FirstName, $LastName, $Address, $Password)";
+		  VALUES ('$Email', '$FirstName', '$LastName', '$Address', '$Password')";
 
 	if(mysqli_query($db, $query) == TRUE){
 		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
