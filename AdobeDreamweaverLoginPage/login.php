@@ -11,8 +11,8 @@ error_reporting(E_ALL);
 
 <?php
 If(isset($_POST['LoginPageLoginButton'])){
-    $Email = $_POST['LoginPageUsername']; //echo $username;
-    $Password = $_POST['LoginPagePassword']; //echo $password;
+    $_SESSION["Email"] = $_POST['LoginPageUsername']; //echo $username;
+    $_SESSION["Password"] = $_POST['LoginPagePassword']; //echo $password;
 
     //SQL query - match username and password
     $query = "(SELECT
@@ -21,21 +21,21 @@ If(isset($_POST['LoginPageLoginButton'])){
             'Admin' AS From_Table
         FROM
             Administrator
-	WHERE Email ='$Email' AND Password ='$Password')
+	WHERE Email ='$_SESSION["Email"]' AND Password ='$_SESSION["Password"]')
     UNION (SELECT
             Sponsor.Email AS Email,
             Sponsor.Password AS Password,
             'Sponsor' AS From_Table
         FROM
             Sponsor
-	WHERE Email ='$Email' AND Password ='$Password')
+	WHERE Email ='$_SESSION["Email"]' AND Password ='$_SESSION["Password"]')
     UNION (SELECT
             Driver.Email AS Email,
             Driver.Password AS Password,
             'Driver' AS From_Table
         FROM
             Driver
-	WHERE Email ='$Email' AND Password ='$Password')";
+	WHERE Email ='$_SESSION["Email"]' AND Password ='$_SESSION["Password"]')";
     $result = mysqli_query($db, $query);
 
     if ( !mysqli_num_rows($result) ){
