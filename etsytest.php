@@ -2,12 +2,6 @@
 
 
 
-
-
-
-
-
-
 <html>
 <title>TruckTracker</title>
 <h1>TruckTracker</h1>
