@@ -42,9 +42,6 @@ body {
 }
 </style>
 </head>
-<form {
-  text-align: center;
-}>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
