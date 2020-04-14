@@ -26,7 +26,7 @@
 <!--<div style="display: inline-block"><a target="_blank" href="https://openapi.etsy.com/v2/listings/active?api_key=aj02728oc69m7wnkyzrgrnup"><img class="pullImg" style="padding-top: 15px; padding-left: 15px; opacity: 1;" src="https://www.davidegazze.eu/wp-content/uploads/2019/08/test-740x651.png"></a><center>$24</center></div>
 -->
 <div style="display: inline-block"><a target="_blank" href="https://openapi.etsy.com/v2/listings/active?api_key=aj02728oc69m7wnkyzrgrnup"><img class="pullImg" style="padding-top: 15px; padding-left: 15px; opacity: 1;" src="https://www.davidegazze.eu/wp-content/uploads/2019/08/test-740x651.png"></a><center>$24</center></div>
-<div style="display: inline-block"><a target="_blank" href="https://openapi.etsy.com/v2/listings/689317981/images/1958714182?api_key=aj02728oc69m7wnkyzrgrnup"><img class="pullImg" style="padding-top: 15px; padding-left: 15px; opacity: 1;" src="https://openapi.etsy.com/v2/listings/689317981/images/1958714182?api_key=aj02728oc69m7wnkyzrgrnup"></a><center>$24</center></div>
+<div style="display: inline-block"><a target="_blank" href="https://openapi.etsy.com/v2/listings/689317981/images/1958714182?api_key=aj02728oc69m7wnkyzrgrnup"><img class="pullImg" style="padding-top: 15px; padding-left: 15px; opacity: 1;" src="https://openapi.etsy.com/v2/listings/689317981/images/1958714182/url_75x75?api_key=aj02728oc69m7wnkyzrgrnup"></a><center>$24</center></div>
 
 
 </body>
