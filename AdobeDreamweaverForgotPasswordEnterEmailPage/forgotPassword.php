@@ -26,7 +26,7 @@
             'To' => [
               [
                 'Email' => $ToEmailAddress,
-                'Name' => "Tanner Breckenridge"
+                'Name' => ""
               ]
             ],
             'Subject' => "New Password",
