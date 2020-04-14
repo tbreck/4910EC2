@@ -9,17 +9,16 @@ error_reporting(E_ALL);
 
 <?php
 If(isset($_POST['LoginPageLoginButton'])){
-	$Email = $_POST['LoginPageUsername'];
-	$FirstName = $_POST['RegisterDriverFirstName'];
-	$LastName = $_POST['RegisterDriverLastName'];
-	$Address = $_POST['RegisterDriverAddress'];
-	$Password = $_POST['LoginNamePassword'];
+	$Email = $_POST['LoginPageUsername']; echo $Email;
+	$FirstName = $_POST['RegisterDriverFirstName']; echo $FirstName;
+	$LastName = $_POST['RegisterDriverLastName']; echo $LastName;
+	$Address = $_POST['RegisterDriverAddress']; echo $Address;
+	$Password = $_POST['LoginNamePassword']; echo $Password;
 	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
 
-	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password, Driver_ID)
-		  VALUES ($Email, $FirstName, $LastName, $Address, $Password, '11')";
+	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password)
+		  VALUES ($Email, $FirstName, $LastName, $Address, $Password)";
 
-	$result = mysqli_query($db, $query);
 	if(mysqli_query($db, $query) == TRUE){
 		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html');
 	}else{
