@@ -84,8 +84,6 @@ body {
 		<!-- <input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email"> -->
     
     <form method="post"> 
-        width: 50%;
-        margin-left : 25%
         <input type="text" name="emailAddress" placeholder = "Email"/>
         <input type="submit" name="button" value="Send Email"/> 
   </form> 
