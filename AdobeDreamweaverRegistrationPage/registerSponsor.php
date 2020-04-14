@@ -47,7 +47,7 @@ If(isset($_POST['LoginPageLoginButton'])){
         ];
         $response = $mj->post(Resources::$Email, ['body' => $body]);
         echo "Sponsor account created for $ToEmailAddress";
-    }
+        
                 header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }else{
                 echo("Registration Failed!");
