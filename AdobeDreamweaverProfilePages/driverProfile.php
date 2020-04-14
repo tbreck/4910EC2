@@ -1,6 +1,6 @@
 <?php
 
-$db = mysqli_connect('database-4910.cj8zoegen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10', 'TestDB')
+$db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10', 'TestDB')
 or die('Error connecting to MySQL Server');
 session_start();
 error_reporting(E_ALL);
@@ -64,7 +64,7 @@ body {
   <p>First Name: John</p>
   <p>Last Name: Doe</p>
   <p>Driver ID: jdoe</p>
-  <p>Email: jdoe@gmail.com</p>
+  <p>Email: <?php echo $_SESSION['Email']?></p>
   <p>Date of Birth: April 1, 1999</p>
   <p>Address: Nowhere, North Dakota</p>
   <p>Password: ********</p>
