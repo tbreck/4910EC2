@@ -25,13 +25,13 @@
             ],
             'To' => [
               [
-                'Email' => $ToEmailAddress
+                'Email' => '$ToEmailAddress'
                 // 'Email' => "tbrecke@clemson.edu",
                 // 'Name' => "Tanner Breckenridge"
               ]
             ],
             'Subject' => "New Password",
-            'TextPart' => "This is a randomly generated password for you. \n" + $newPassword,
+            'TextPart' => "This is a randomly generated password for you. \n $newPassword",
             'CustomID' => "NewPassword"
           ]
         ]
