@@ -37,7 +37,7 @@
       ];
       $response = $mj->post(Resources::$Email, ['body' => $body]);
       echo "Password sent to $ToEmailAddress";
-      $response->success() && var_dump($response->getData());
+    //   $response->success() && var_dump($response->getData());
     }
 ?>
 
