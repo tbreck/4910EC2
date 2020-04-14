@@ -35,7 +35,7 @@ If(isset($_POST['LoginPageLoginButton'])){
             'Driver' AS From_Table
         FROM
             Driver
-	WHERE Email ='{$_SESSION['Email']' AND Password ='$_SESSION['Password']')}";
+	WHERE Email ='{$_SESSION['Email']}' AND Password ='{$_SESSION['Password']}')";
     $result = mysqli_query($db, $query);
 
     if ( !mysqli_num_rows($result) ){
