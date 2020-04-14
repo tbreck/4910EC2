@@ -84,7 +84,7 @@ body {
 		<input type="text" class="form-control" id="RegisterDriverAddressButton" name="RegisterDriverAddress" placeholder = "Address">
 		<input type="text" class="form-control" id="LoginoNamePasswordButton" name="LoginNamePassword" placeholder = "Password">
 		<input type="text" class="form-control" id="LoginoNameConfirmPasswordButton" name="LoginNameConfirmPassword" placeholder = "Confirm Password">
-		<button type="submit" id="LoginPageLoginButton">Submit</button>
+		<button type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Submit</button>
 	</div>
 	
 <script type="text/javascript" src="js/RegisterSponsorPageBootstrap.js"></script>
