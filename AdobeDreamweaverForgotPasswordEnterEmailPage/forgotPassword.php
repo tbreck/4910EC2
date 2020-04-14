@@ -22,6 +22,7 @@
 
         $ToEmailAddress = $_POST['emailAddress'];
         $sql = "UPDATE Driver SET Password='$newPassword' WHERE Email='$ToEmailAddress'";
+        mysqli_query($db, $query);
       $mj = new \Mailjet\Client('32230d8659943bad45e3b7ed6dba803f','c4917891da7beb49f5ae35f618c9fa92',true,['version' => 'v3.1']);
       $body = [
         'Messages' => [
