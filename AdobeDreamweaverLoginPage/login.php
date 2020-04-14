@@ -21,21 +21,21 @@ If(isset($_POST['LoginPageLoginButton'])){
             'Admin' AS From_Table
         FROM
             Administrator
-	WHERE Email ='$_SESSION['Email']' AND Password ='$_SESSION['Password']')
+	WHERE Email ='{$_SESSION['Email']}' AND Password ='{$_SESSION['Password']}')
     UNION (SELECT
             Sponsor.Email AS Email,
             Sponsor.Password AS Password,
             'Sponsor' AS From_Table
         FROM
             Sponsor
-	WHERE Email ='$_SESSION['Email']' AND Password ='$_SESSION['Password']')
+	WHERE Email ='{$_SESSION['Email']}' AND Password ='{$_SESSION['Password']}')
     UNION (SELECT
             Driver.Email AS Email,
             Driver.Password AS Password,
             'Driver' AS From_Table
         FROM
             Driver
-	WHERE Email ='$_SESSION['Email']' AND Password ='$_SESSION['Password']')";
+	WHERE Email ='{$_SESSION['Email']' AND Password ='$_SESSION['Password']')}";
     $result = mysqli_query($db, $query);
 
     if ( !mysqli_num_rows($result) ){
