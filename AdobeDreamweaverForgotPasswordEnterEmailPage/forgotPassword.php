@@ -79,7 +79,7 @@ body {
 
     <div id="LoginPageBox">
 		<h1 id="LoginPageLoginHeader">Forgot Password?</h1>
-		<input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email">
+		<!-- <input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email"> -->
     
     <form method="post"> 
         <input type="text" name="emailAddress" placeholder = "Email"/>
