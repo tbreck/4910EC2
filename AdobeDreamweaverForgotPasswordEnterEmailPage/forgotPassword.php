@@ -25,7 +25,7 @@
             ],
             'To' => [
               [
-                'Email' => '$ToEmailAddress',
+                'Email' => $ToEmailAddress,
                 'Name' => "Tanner Breckenridge"
               ]
             ],
