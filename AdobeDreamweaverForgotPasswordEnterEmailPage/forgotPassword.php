@@ -1,4 +1,14 @@
 <?php
+
+$db = mysqli_connect('database-4910.cj8zoecgen2f.us-east-1.rds.amazonaws.com', 'admin', 'CPSC4910Team10', 'TestDB')
+or die('Error connecting to MySQL server');
+session_start();
+error_reporting(E_ALL);
+
+?>
+
+<?php
+
     require '../vendor/autoload.php';
     use \Mailjet\Resources;
     if(isset($_POST['button'])) {
@@ -12,7 +22,7 @@
             array_push($password, ucfirst($arr[$randomNumber]));
         }
         $newPassword = $password[0].$password[1].$password[2].$password[3];
-
+        $sql = "UPDATE Driver SET Password='$newPassword' WHERE Email='$ToEmailAddress'";
 
         $ToEmailAddress = $_POST['emailAddress'];
       $mj = new \Mailjet\Client('32230d8659943bad45e3b7ed6dba803f','c4917891da7beb49f5ae35f618c9fa92',true,['version' => 'v3.1']);
@@ -71,7 +81,7 @@ form {
             <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Account <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
             <a class="nav-link" href="/AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html">Points <span class="sr-only">(current)</span></a>
