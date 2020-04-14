@@ -9,20 +9,21 @@ error_reporting(E_ALL);
 
 <?php
 If(isset($_POST['LoginPageLoginButton'])){
-	$Email = $_POST['LoginPageUsername']; echo $Email;
-	$FirstName = $_POST['RegisterDriverFirstName']; echo $FirstName;
-	$LastName = $_POST['RegisterDriverLastName']; echo $LastName;
-	$Address = $_POST['RegisterDriverAddress']; echo $Address;
-	$Password = $_POST['LoginNamePassword']; echo $Password;
+	$Email = $_POST['LoginPageUsername']; //echo $Email;
+	$FirstName = $_POST['RegisterDriverFirstName']; //echo $FirstName;
+	$LastName = $_POST['RegisterDriverLastName']; //echo $LastName;
+	$Address = $_POST['RegisterDriverAddress']; //echo $Address;
+	$Password = $_POST['LoginNamePassword']; //echo $Password;
 	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
 
 	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password)
 		  VALUES ($Email, $FirstName, $LastName, $Address, $Password)";
 
 	if(mysqli_query($db, $query) == TRUE){
-		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html'); echo "Error: " . $sql . "<br>" . mysqli_error($db);
+		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
 	}else{
 		echo("Registration Failed!");
+		echo "Error: " . $sql . "<br>" .mysqli_error($db);
 	}
 
 }
