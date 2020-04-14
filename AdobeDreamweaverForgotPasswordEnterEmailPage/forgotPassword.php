@@ -25,9 +25,8 @@
             ],
             'To' => [
               [
-                'Email' => '$ToEmailAddress'
-                // 'Email' => "tbrecke@clemson.edu",
-                // 'Name' => "Tanner Breckenridge"
+                'Email' => '$ToEmailAddress',
+                'Name' => "Tanner Breckenridge"
               ]
             ],
             'Subject' => "New Password",
