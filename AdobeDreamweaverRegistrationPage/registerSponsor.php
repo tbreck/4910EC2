@@ -78,6 +78,7 @@ body {
     </nav>
 	
     <div id="LoginPageBox">
+	<form method = "post">
 		<h1 id="LoginPageLoginHeader">Register for a Sponsor Account!</h1>
 		<input type="text" class="form-control" id="LoginPageUsernameButton" name="LoginPageUsername" placeholder = "Email">
 		<input type="text" class="form-control" id="RegisterDriverFirstNameButton" name="RegisterDriverFirstName" placeholder = "Company Name">
@@ -85,6 +86,7 @@ body {
 		<input type="text" class="form-control" id="LoginoNamePasswordButton" name="LoginNamePassword" placeholder = "Password">
 		<input type="text" class="form-control" id="LoginoNameConfirmPasswordButton" name="LoginNameConfirmPassword" placeholder = "Confirm Password">
 		<button type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Submit</button>
+	</form>
 	</div>
 	
 <script type="text/javascript" src="js/RegisterSponsorPageBootstrap.js"></script>
