@@ -2,6 +2,19 @@
     require '../vendor/autoload.php';
     use \Mailjet\Resources;
     if(isset($_POST['button'])) {
+        $file = "words.txt";
+        $content = file_get_contents($file);
+        $arr = explode(" ", $content);
+        $password = [];
+
+        for ($x = 0; $x < 4; $x++) {
+            $randomNumber = rand(0,2512);
+            array_push($password, ucfirst($arr[$randomNumber]));
+        }
+        $newPassword = $password[0].$password[1].$password[2].$password[3];
+
+
+        $ToEmailAddress = $_POST['emailAddress'];
       $mj = new \Mailjet\Client('32230d8659943bad45e3b7ed6dba803f','c4917891da7beb49f5ae35f618c9fa92',true,['version' => 'v3.1']);
       $body = [
         'Messages' => [
@@ -12,12 +25,13 @@
             ],
             'To' => [
               [
-                'Email' => "tbrecke@clemson.edu",
-                'Name' => "Tanner Breckenridge"
+                'Email' => $ToEmailAddress
+                // 'Email' => "tbrecke@clemson.edu",
+                // 'Name' => "Tanner Breckenridge"
               ]
             ],
             'Subject' => "New Password",
-            'TextPart' => "This is a randomly generated password for you.",
+            'TextPart' => "This is a randomly generated password for you. \n" + $newPassword,
             'CustomID' => "NewPassword"
           ]
         ]
@@ -81,7 +95,6 @@ form {
 
     <div id="LoginPageBox">
 		<h1 id="LoginPageLoginHeader">Forgot Password?</h1>
-		<!-- <input type="text" class="form-control" id="LoginPageUsernameButton" placeholder = "Email"> -->
     
     <form method="post"> 
         <input type="text" name="emailAddress" placeholder = "Email"/>
