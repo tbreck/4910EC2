@@ -8,6 +8,9 @@ error_reporting(E_ALL);
 ?>
 
 <?php
+require '../vendor/autoload.php';
+use \Mailjet\Resources;
+
 If(isset($_POST['LoginPageLoginButton'])){
         $Email = $_POST['LoginPageUsername']; //echo $Email;
         $CompanyName = $_POST['RegisterDriverFirstName']; //echo $FirstName;
@@ -19,6 +22,32 @@ If(isset($_POST['LoginPageLoginButton'])){
                   VALUES ('$Email', '$CompanyName', '$Address', '$Password')";
 
         if(mysqli_query($db, $query) == TRUE){
+
+        $ToEmailAddress = $_POST['LoginPageUsername'];
+
+        $mj = new \Mailjet\Client('32230d8659943bad45e3b7ed6dba803f','c4917891da7beb49f5ae35f618c9fa92',true,['version' => 'v3.1']);
+        $body = [
+          'Messages' => [
+            [
+              'From' => [
+                'Email' => "do_not_reply@cpsc4910.com",
+                'Name' => "Team 10"
+              ],
+              'To' => [
+                [
+                  'Email' => $ToEmailAddress,
+                  'Name' => ""
+                ]
+              ],
+              'Subject' => "Sponsor Account Created",
+              'TextPart' => "An account was created on www.cpsc4910.com as a Sponsor",
+              'CustomID' => "AccountCreated"
+            ]
+          ]
+        ];
+        $response = $mj->post(Resources::$Email, ['body' => $body]);
+        echo "Sponsor account created for $ToEmailAddress";
+        
                 header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }else{
                 echo("Registration Failed!");
