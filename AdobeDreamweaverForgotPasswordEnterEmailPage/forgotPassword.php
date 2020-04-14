@@ -30,7 +30,7 @@
               ]
             ],
             'Subject' => "New Password",
-            'TextPart' => "This is a randomly generated password for you. \n $newPassword",
+            'TextPart' => "This is a randomly generated password for you. \n\n New Password = \"$newPassword\"",
             'CustomID' => "NewPassword"
           ]
         ]
