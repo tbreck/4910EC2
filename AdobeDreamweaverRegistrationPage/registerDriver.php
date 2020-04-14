@@ -20,7 +20,7 @@ If(isset($_POST['LoginPageLoginButton'])){
 		  VALUES ($Email, $FirstName, $LastName, $Address, $Password)";
 
 	if(mysqli_query($db, $query) == TRUE){
-		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html');
+		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html'); echo "Error: " . $sql . "<br>" . mysqli_error($db);
 	}else{
 		echo("Registration Failed!");
 	}
