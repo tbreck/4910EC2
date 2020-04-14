@@ -40,6 +40,9 @@
 body {
     margin-bottom: 40px;
 }
+form {
+        text-align: center;
+    }
 </style>
 </head>
 
