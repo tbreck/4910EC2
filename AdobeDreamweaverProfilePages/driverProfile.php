@@ -20,7 +20,10 @@ if(!mysqli_num_rows($result)){
 
 $rowInfo = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $_SESSION['First_Name'] = $rowInfo['First_Name'];
-echo $_SESSION['First_Name'];
+$_SESSION['Last_Name'] = $rowInfo['Last_Name'];
+$_SESSION['Address'] = $rowInfo['Address'];
+$_SESSION['Driver_ID'] = $rowInfo['Driver_ID'];
+$_SESSION['Date_Of_Birth'] = $rowInfo['Date_Of_Birth'];
 
 ?>
 
@@ -76,16 +79,16 @@ body {
 <img src="Images/profile.png" width="200" height="211" alt=""/> </div>
 
 <div id="body_column">
-  <h1>John Doe</h1>
+  <h1><?php echo $_SESSION['First_Name']?> <?php echo $_SESSION['Last_Name']?></h1>
   <hr>
-  <p>First Name: John</p>
-  <p>Last Name: Doe</p>
-  <p>Driver ID: jdoe</p>
+  <p>First Name: <?php echo $_SESSION['First_Name']?></p>
+  <p>Last Name: <?php echo $_SESSION['Last_Name']?></p>
+  <p>Driver ID: <?php echo $_SESSION['Driver-ID']?></p>
   <p>Email: <?php echo $_SESSION['Email']?></p>
-  <p>Date of Birth: April 1, 1999</p>
-  <p>Address: Nowhere, North Dakota</p>
-  <p>Password: ********</p>
-  <p>Total Points: 150</p>
+  <p>Date of Birth: <?php echo $_SESSION['Date_Of_Birth']?></p>
+  <p>Address: <?php echo $_SESSION['Address']?></p>
+  <p>Password: <?php echo $_SESSION['Password']?></p>
+  <p>Total Points: TO INPUT</p>
 
   <button type="button">Edit Profile</button>
   <button type="button">Reset Password</button>
