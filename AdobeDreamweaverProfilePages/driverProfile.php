@@ -7,6 +7,23 @@ error_reporting(E_ALL);
 
 ?>
 
+<?php
+
+$sql = "SELECT First_Name, Last_Name, Address, Driver_ID, Date_Of_Birth
+	FROM Driver
+	WHERE Email = {$_SESSION['Email']}";
+$result = mysqli_query($db, $sql);
+
+if(!mysqli_num_rows($result)){
+	echo 'Problem with fetching data';
+}
+
+$rowInfo = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$_SESSION['First_Name'] = $rowInfo['First_Name'];
+echo $_SESSION['First_Name'];
+
+?>
+
 <html>
 <html lang="en">
 <head>
