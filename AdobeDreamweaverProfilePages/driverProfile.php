@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 $sql = "SELECT First_Name, Last_Name, Address, Driver_ID, Date_Of_Birth
 	FROM Driver
-	WHERE Email = {$_SESSION['Email']}";
+	WHERE Email = '{$_SESSION['Email']}'";
 $result = mysqli_query($db, $sql);
 
 if(!mysqli_num_rows($result)){
