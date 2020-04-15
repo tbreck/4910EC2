@@ -83,7 +83,7 @@ body {
   <hr>
   <p>First Name: <?php echo $_SESSION['First_Name']?></p>
   <p>Last Name: <?php echo $_SESSION['Last_Name']?></p>
-  <p>Driver ID: <?php echo $_SESSION['Driver-ID']?></p>
+  <p>Driver ID: <?php echo $_SESSION['Driver_ID']?></p>
   <p>Email: <?php echo $_SESSION['Email']?></p>
   <p>Date of Birth: <?php echo $_SESSION['Date_Of_Birth']?></p>
   <p>Address: <?php echo $_SESSION['Address']?></p>
