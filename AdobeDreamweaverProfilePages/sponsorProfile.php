@@ -27,13 +27,13 @@ $_SESSION['Sponsor_ID'] = $rowInfo['Sponsor_ID'];
 $_SESSION['Point_Dollar_Ratio'] = $rowInfo['Point_Dollar_Ratio'];
 ?>
 
-<?php
+<?php /*
 $sql = "SELECT  COUNT(Sponsor_ID = '{$_SESSION['Sponsor_ID']}')
         FROM Driver/Sponsor";
 $result2 = mysqli_query($db, $sql);
 $driverSponsorRel = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 $count_drivers = $driverSponsorRel['Count'];
-echo $count_drivers;
+echo $count_drivers; */
 ?>
 
 <html>
@@ -100,12 +100,7 @@ body {
   <p>Address: <?php echo $_SESSION['Address']?></p>
   <p>Point to $ Ratio: <?php echo $_SESSION['Point_Dollar_Ratio']?> to 1</p>
   <p>Password: <?php echo $_SESSION['Password']?></p>
-  <p>Total Drivers: <?php if(!mysqli_num_rows($count_drivers)){
-                            echo '0';
-                          }
-                          else{
-                            echo $count_drivers;
-                          }?></p>
+  <p>Total Drivers: </p>
 
   <button type="button">Edit Profile</button>
   <button type="button">Reset Password</button>
