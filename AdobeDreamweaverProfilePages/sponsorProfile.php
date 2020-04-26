@@ -109,6 +109,10 @@ body {
   <button type="button">Edit Profile</button>
   <button type="button">Reset Password</button>
 
+  <input type="text" class="form-control" id="DriverEmailtoAdd" placeholder = "Driver's Email To Add To List">
+  <button type="button" id="AddDriver">Add Driver</button>
+
+
 </div>
 
 <script type="text/javascript" src="js/FreshStartBootstrap.js"></script>
