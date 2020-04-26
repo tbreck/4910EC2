@@ -28,9 +28,8 @@ $_SESSION['Point_Dollar_Ratio'] = $rowInfo['Point_Dollar_Ratio'];
 ?>
 
 <?php
-$sql = "SELECT  Sponsor_ID, Count(*)
-        FROM Driver/Sponsor
-        WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
+$sql = "SELECT  COUNT(Sponsor_ID = '{$_SESSION['Sponsor_ID']}')
+        FROM Driver/Sponsor";
 $result2 = mysqli_query($db, $sql);
 $driverSponsorRel = mysqli_fetch_array($result2, MYSQLI_ASSOC);
 $count_drivers = $driverSponsorRel['Count'];
@@ -43,7 +42,7 @@ echo $count_drivers;
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Profile</title>
+<title>FreshStartProfile</title>
 <link href="css/FreshStartBootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
@@ -62,10 +61,10 @@ body {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="\..\index.php">Catalog <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/driverProfile.php">Account <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
             <a class="nav-link" href="/AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html">Points <span class="sr-only">(current)</span></a>
@@ -74,7 +73,7 @@ body {
             <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Settings <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
-            <a class="nav-link" href="/jbaughAdobeDreamweaverCartPage/CartDriverPage.html">Your Cart <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/AdobeDreamweaverSettingsPage/SettingsPage.html">Your Cart <span class="sr-only">(current)</span></a>
           </li>
 	  </li>
       <li class ="nav-item active">
@@ -111,6 +110,8 @@ body {
   <button type="button">Edit Profile</button>
   <button type="button">Reset Password</button>
 
+  <input type="text" class="form-control" id="DriverEmailtoAdd" placeholder = "Driver's Email To Add To List">
+  <button type="button" id="AddDriver">Add Driver</button>
 
 
 </div>
