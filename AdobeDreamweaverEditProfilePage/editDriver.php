@@ -27,7 +27,9 @@ $_SESSION['Date_Of_Birth'] = $rowInfo['Date_Of_Birth'];
 
 ?>
 
+/*
 <?php
+
 If(isset($_POST['DriverSaveButton'])){
         $Email = $_POST['EditProfileDriverEmail']; //echo $Email;
         $FirstName = $_POST['EditProfileFirstName']; //echo $FirstName;
@@ -53,7 +55,7 @@ If(isset($_POST['DriverSaveButton'])){
 }
 
 ?>
-
+*/
 <html>
 <html lang="en">
 <head>
