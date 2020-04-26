@@ -13,7 +13,7 @@ If(isset($_POST['LoginPageLoginButton'])){
 	$Password = $_POST['LoginNamePassword']; //echo $Password;
 	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
 
-	$query = "INSERT INTO Admin (Email,  Password)
+	$query = "INSERT INTO Administrator (Email,  Password)
 		  VALUES ('$Email', '$Password')";
 
 	if(mysqli_query($db, $query) == TRUE){
