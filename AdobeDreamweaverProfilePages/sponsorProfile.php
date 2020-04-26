@@ -104,7 +104,7 @@ body {
 
   <form method="post">
   <button type="submit" id="ProfilePageEditProfileButtonSponsor" formaction="/AdobeDreamweaverEditProfilePage/editSponsor.php">Edit Profile</button>
-  <button type="button">Reset Password</button>
+  <button type="submit" id="ForgotPassword" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/forgotPassword.php">Reset Password</button>
 
   <input type="text" class="form-control" id="DriverEmailtoAdd" placeholder = "Driver's Email To Add To List">
   <button type="button" id="AddDriver">Add Driver</button>
