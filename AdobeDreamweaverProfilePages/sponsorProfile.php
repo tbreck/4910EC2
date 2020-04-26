@@ -32,7 +32,7 @@ $sql = "SELECT  Sponsor_ID, Count(*)
 $count_drivers = mysqli_query($db, $sql);
 
 if(!mysqli_num_rows($count_drivers)){
-        echo 'Problem with fetching data';
+        echo $_SESSION['Sponsor_ID';
 }
 
 ?>
