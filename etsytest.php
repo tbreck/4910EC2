@@ -1,6 +1,7 @@
+<?php
+$etsykey = aj02728oc69m7wnkyzrgrnup;
 
-
-
+?>
 
 <html>
 <title>TruckTracker</title>

@@ -71,7 +71,9 @@ body {
 
   <button type="button">Edit Profile</button>
   <button type="button">Reset Password</button>
-  <button type="button">Create Admin</button>
+  <form action="/AdobeDreamweaverRegistrationPage/RegisterAdminPage.php">
+    <input type="submit" value="Create Admin" />
+</form>
 
 </div>
 
