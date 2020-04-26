@@ -9,8 +9,8 @@ error_reporting(E_ALL);
 
 <?php
 
-$sql = "SELECT First_Name, Last_Name, Address, Driver_ID, Date_Of_Birth
-        FROM Driver
+$sql = "SELECT Company_Name, Address, Sponsor_ID, Point_Dollar_Ratio
+        FROM Sponsor
         WHERE Email = '{$_SESSION['Email']}'";
 $result = mysqli_query($db, $sql);
 
@@ -19,35 +19,32 @@ if(!mysqli_num_rows($result)){
 }
 
 $rowInfo = mysqli_fetch_array($result, MYSQLI_ASSOC);
-$_SESSION['First_Name'] = $rowInfo['First_Name'];
-$_SESSION['Last_Name'] = $rowInfo['Last_Name'];
+$_SESSION['Company_Name'] = $rowInfo['Company_Name'];
 $_SESSION['Address'] = $rowInfo['Address'];
-$_SESSION['Driver_ID'] = $rowInfo['Driver_ID'];
-$_SESSION['Date_Of_Birth'] = $rowInfo['Date_Of_Birth'];
+$_SESSION['Sponsor_ID'] = $rowInfo['Sponsor_ID'];
+$_SESSION['Point_Dollar_Ratio'] = $rowInfo['Point_Dollar_Ratio'];
 
 ?>
 
 
 <?php
 
-If(isset($_POST['DriverSaveButton'])){
-        $Email = $_POST['EditProfileDriverEmail']; //echo $Email;
-        $FirstName = $_POST['EditProfileFirstName']; //echo $FirstName;
-        $LastName = $_POST['EditProfileLastName']; //echo $LastName;
-        $Address = $_POST['EditProfileAddress']; //echo $Address;
-	$Birthday = $_POST['EditProfileBirthday'];
+If(isset($_POST['SponsorSaveButton'])){
+        $Email = $_POST['EditProfileSponsorEmail']; //echo $Email;
+        $CompanyName = $_POST['EditProfileCompanyName']; //echo $FirstName;
+        $Address = $_POST['EditProfileSponsorAddress']; //echo $Address;
+        $PointDollarRatio = $_POST['EditProfileRatio'];
 
-        $query = "UPDATE Driver
+        $query = "UPDATE Sponsor
                   SET Email = '$Email',
-		      First_Name = '$FirstName',
-		      Last_Name = '$LastName',
-		      Address = '$Address',
-		      Date_Of_Birth = '$Birthday'
-		  WHERE Driver_ID = '{$_SESSION['Driver_ID']}'";
+                      Company_Name = '$CompanyName',
+                      Address = '$Address',
+                      Point_Dollar_Ratio = '$PointDollarRatio'
+                  WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
 
         if(mysqli_query($db, $query) == TRUE){
-		$_SESSION['Email'] = $Email;
-                header('Location: /../AdobeDreamweaverProfilePages/driverProfile.php'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
+                $_SESSION['Email'] = $Email;
+                header('Location: /../AdobeDreamweaverProfilePages/sponsorProfile.php'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }else{
                 echo("Edit Profile Failed!");
                 echo "Error: " . $sql . "<br>" .mysqli_error($db);
@@ -63,7 +60,7 @@ If(isset($_POST['DriverSaveButton'])){
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Edit Driver</title>
+<title>CPSC4910 Project</title>
 <link href="css/EditProfileBootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
@@ -114,16 +111,15 @@ body {
 <div id="body_column">
   <form method="post">
   <hr>
-  <input type="text" class="form-control" id="EditProfileFirstName" name="EditProfileFirstName" placeholder = "First Name">
-  <input type="text" class="form-control" id="EditProfileLastName" name="EditProfileLastName" placeholder = "Last Name">
-  <p id="DriverID">Driver ID: <?php echo $_SESSION['Driver_ID'] ?></p>
-  <input type="text" class="form-control" id="EditProfileDriverEmail" name="EditProfileDriverEmail" placeholder = "Email">
-  <input type="text" class="form-control" id="EditProfileBirthday" name="EditProfileBirthday" placeholder = "Date of Birth">
-  <input type="text" class="form-control" id="EditProfileAddress" name="EditProfileAddress" placeholder = "Address">
-  <p id="DriverPasswordText">Password: <?php echo $_SESSION['Password'] ?></p>
-  <p>Total Points: TO INPUT</p>
+  <input type="text" class="form-control" id="EditProfileCompanyName" name="EditProfileCompanyName" placeholder = "Company Name">
+  <p id="SponsorID">Sponsor ID: <?php echo $_SESSION['Sponsor_ID'] ?></p>
+  <input type="text" class="form-control" id="EditProfileSponsorEmail" name="EditProfileSponsorEmail" placeholder = "Email">
+  <input type="text" class="form-control" id="EditProfileSponsorAddress" name="EditProfileSponsorAddress" placeholder = "Address">
+  <input type="text" class="form-control" id="EditProfileRatio" name="EditProfileRatio" placeholder = "Points to Dollars Ratio">
+  <p id="SponsorPasswordText">Password: <?php echo $_SESSION['Password'] ?></p>
+  <p>Total Drivers: TO INPUT</p>
 	
-  <button type="submit" id="DriverSaveButton" name="DriverSaveButton">Save Profile</button>
+  <button type="submit" id="SponsorSaveButton" name="SponsorSaveButton">Save Profile</button>
   </form>
 
 </div>
