@@ -131,7 +131,7 @@
         </div>
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/2.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/2.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Hat</h5>
               <p class="card-text">Information about the item.</p>
