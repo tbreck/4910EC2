@@ -27,6 +27,31 @@ $_SESSION['Date_Of_Birth'] = $rowInfo['Date_Of_Birth'];
 
 ?>
 
+<?php
+If(isset($_POST['DriverSaveButton'])){
+        $Email = $_POST['EditProfileDriverEmail']; //echo $Email;
+        $FirstName = $_POST['EditProfileFirstName']; //echo $FirstName;
+        $LastName = $_POST['EditProfileLastName']; //echo $LastName;
+        $Address = $_POST['EditProfileAddress']; //echo $Address;
+	$Birthday = $_POST['EditProfileBirthday']
+
+        $query = "UPDATE Driver
+                  SET Email = '$Email'
+		      First_Name = '$FirstName'
+		      Last_Name = '$LastName'
+		      Address = '$Address'
+		      Date_Of_Birth = '$Birthday'
+		  WHERE Driver_ID = '{$_SESSION['Driver_ID']}'";
+
+        if(mysqli_query($db, $query) == TRUE){
+                header('Location: /../AdobeDreamweaverProfilePages/driverProfile.php'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
+        }else{
+                echo("Edit Profile Failed!");
+                echo "Error: " . $sql . "<br>" .mysqli_error($db);
+        }
+
+}
+
 <html>
 <html lang="en">
 <head>
@@ -82,18 +107,20 @@ body {
 <img src="Images/profile.png" width="200" height="211" alt=""/> </div>
 	
 <div id="body_column">
+  <form method="post">
   <hr>
-  <input type="text" class="form-control" id="EditProfileFirstName" placeholder = "First Name">
-  <input type="text" class="form-control" id="EditProfileLastName" placeholder = "Last Name">
+  <input type="text" class="form-control" id="EditProfileFirstName" name="EditProfileFirstName" placeholder = "First Name">
+  <input type="text" class="form-control" id="EditProfileLastName" name="EditProfileLastName" placeholder = "Last Name">
   <p id="DriverID">Driver ID: <?php echo $_SESSION['Driver_ID'] ?></p>
-  <input type="text" class="form-control" id="EditProfileDriverEmail" placeholder = "Email">
-  <input type="text" class="form-control" id="EditProfileBirthday" placeholder = "Date of Birth">
-  <input type="text" class="form-control" id="EditProfileAddress" placeholder = "Address">
+  <input type="text" class="form-control" id="EditProfileDriverEmail" name="EditProfileDriverEmail" placeholder = "Email">
+  <input type="text" class="form-control" id="EditProfileBirthday" name="EditProfileBirthday" placeholder = "Date of Birth">
+  <input type="text" class="form-control" id="EditProfileAddress" name="EditProfileAddress" placeholder = "Address">
   <p id="DriverPasswordText">Password: <?php echo $_SESSION['Password'] ?></p>
   <p>Total Points: TO INPUT</p>
 	
-  <button type="button" id="DriverSaveButton">Save Profile</button>
-	
+  <button type="button" id="DriverSaveButton" name="DriverSaveButton">Save Profile</button>
+  </form>
+
 </div>
 	
 <script type="text/javascript" src="js/EditProfileBootstrap.js"></script>
