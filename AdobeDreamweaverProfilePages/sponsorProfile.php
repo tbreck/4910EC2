@@ -26,7 +26,7 @@ $_SESSION['Address'] = $rowInfo['Address'];
 $_SESSION['Sponsor_ID'] = $rowInfo['Sponsor_ID'];
 $_SESSION['Point_Dollar_Ratio'] = $rowInfo['Point_Dollar_Ratio'];
 
-$sql = "SELECT  Count(*)
+$sql = "SELECT  Sponsor_ID, Count(*)
         FROM Driver/Sponsor
         WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
 $count_drivers = mysqli_query($db, $sql);
