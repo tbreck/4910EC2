@@ -43,7 +43,7 @@ echo $count_drivers;
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreshStartProfile</title>
+<title>Profile</title>
 <link href="css/FreshStartBootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {

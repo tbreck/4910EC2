@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap eCommerce Page Template</title>
+    <title>CPSC4910 Project</title>
     <!-- Bootstrap -->
     <link href="AdobeDreamweaverHomePage/css/bootstrap-4.4.1.css" rel="stylesheet">
   </head>

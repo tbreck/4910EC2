@@ -62,7 +62,7 @@ If(isset($_POST['DriverSaveButton'])){
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreshStartProfile</title>
+<title>Edit Driver</title>
 <link href="css/EditProfileBootstrap.css" rel="stylesheet">
 <style type="text/css">
 body {
