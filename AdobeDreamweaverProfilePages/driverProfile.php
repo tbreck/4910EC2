@@ -52,10 +52,10 @@ body {
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverLoginPage/login.php">Catalog <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="\..\index.php">Catalog <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverForgotPasswordEnterEmailPage/ForgotPasswordEnterEmailPage.html">Account <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/driverProfile.php">Account <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
             <a class="nav-link" href="/AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html">Points <span class="sr-only">(current)</span></a>
@@ -64,7 +64,7 @@ body {
             <a class="nav-link" href="/AdobeDreamweaverProfilePages/FreshStartProfile.html">Settings <span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item active">
-            <a class="nav-link" href="/AdobeDreamweaverSettingsPage/SettingsPage.html">Your Cart <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/jbaughAdobeDreamweaverCartPage/CartDriverPage.html">Your Cart <span class="sr-only">(current)</span></a>
           </li>
 	  </li>
       <li class ="nav-item active">
