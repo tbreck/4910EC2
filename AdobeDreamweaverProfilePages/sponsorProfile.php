@@ -29,10 +29,10 @@ $_SESSION['Point_Dollar_Ratio'] = $rowInfo['Point_Dollar_Ratio'];
 $sql = "SELECT  Sponsor_ID, Count(*)
         FROM Driver/Sponsor
         WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
-$count_drivers = mysqli_query($db, $sql);
-
-
-
+$result = mysqli_query($db, $sql);
+$driverSponsorRel = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$count_drivers = $driverSponsorRel['Count'];
+echo $count_drivers;
 ?>
 
 <html>
