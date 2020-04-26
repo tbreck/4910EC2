@@ -85,9 +85,9 @@ body {
 	</form>
 	</div>
 
-<script type="text/javascript" src="js/RegisterDriverPageBootstrap.js"></script>
-<script type="text/javascript" src="js/RegisterDriverPageJQuery.min.js"></script>
-<script type="text/javascript" src="js/RegisterDriverPagePopper.js"></script>
+<script type="text/javascript" src="js/RegisterAdminPageBootstrap.js"></script>
+<script type="text/javascript" src="js/RegisterAdminPageJQuery.min.js"></script>
+<script type="text/javascript" src="js/RegisterAdminPagePopper.js"></script>
 
 </body>
 </html>
