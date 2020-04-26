@@ -96,7 +96,7 @@ body {
 
   <form method="post">
   <button type="submit" id="ProfilePageEditProfileButtonDriver" formaction="/AdobeDreamweaverEditProfilePage/editDriver.php">Edit Profile</button>
-  <button type="button">Reset Password</button>
+  <button type="submit" id="ForgotPassword" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/forgotPassword.php">Reset Password</button>
   </form>
 
 </div>
