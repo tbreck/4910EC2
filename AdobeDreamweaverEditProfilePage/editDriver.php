@@ -46,6 +46,7 @@ If(isset($_POST['DriverSaveButton'])){
 		  WHERE Driver_ID = '{$_SESSION['Driver_ID']}'";
 
         if(mysqli_query($db, $query) == TRUE){
+		$_SESSION['Email'] = $Email;
                 header('Location: /../AdobeDreamweaverProfilePages/driverProfile.php'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
         }else{
                 echo("Edit Profile Failed!");
