@@ -121,7 +121,7 @@ body {
   <p id="DriverPasswordText">Password: <?php echo $_SESSION['Password'] ?></p>
   <p>Total Points: TO INPUT</p>
 	
-  <button type="button" id="DriverSaveButton" name="DriverSaveButton">Save Profile</button>
+  <button type="submit" id="DriverSaveButton" name="DriverSaveButton">Save Profile</button>
   </form>
 
 </div>
