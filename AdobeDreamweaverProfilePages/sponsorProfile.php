@@ -31,7 +31,7 @@ $sql = "SELECT  Count(*)
         WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
 $count_drivers = mysqli_query($db, $sql);
 
-if(!mysqli_num_rows($result)){
+if(!mysqli_num_rows($count_drivers)){
         echo 'Problem with fetching data';
 }
 
