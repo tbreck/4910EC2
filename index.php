@@ -89,7 +89,7 @@
       <div class="row text-center">
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/lonestar_truck_cropped.jpg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/1.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Item</h5>
               <p class="card-text">Information about the item.</p>
@@ -99,7 +99,7 @@
         </div>
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/lonestar_truck_cropped.jpg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/2.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Item</h5>
               <p class="card-text">Information about the item.</p>
@@ -109,7 +109,7 @@
         </div>
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/lonestar_truck_cropped.jpg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/3.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Item</h5>
               <p class="card-text">Information about the item.</p>
@@ -121,7 +121,7 @@
       <div class="row text-center mt-4">
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/lonestar_truck_cropped.jpg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/4.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Item</h5>
               <p class="card-text">Information about the item.</p>
@@ -131,7 +131,7 @@
         </div>
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/lonestar_truck_cropped.jpg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/5.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Item</h5>
               <p class="card-text">Information about the item.</p>
@@ -141,7 +141,7 @@
         </div>
         <div class="col-md-4 pb-1 pb-md-0">
           <div class="card">
-            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/lonestar_truck_cropped.jpg" alt="Card image cap">
+            <img class="card-img-top" src="AdobeDreamweaverHomePage/Images/6.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Item</h5>
               <p class="card-text">Information about the item.</p>
