@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoginPage</title>
+<link href="css/ShippingAddressPageBootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+    margin-bottom: 40px;
+}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">TruckTracker&nbsp;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Catalog <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Points <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Settings <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Your Cart <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Log Out <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+	
+    <div id="LoginPageBox">
+		<h1 id="ShippingPageHeader">Reset Shipping Address</h1>
+		<input type="text" class="form-control" id="Address1Button" placeholder = "Address Line 1">
+		<input type="text" class="form-control" id="Address2Button" placeholder = "Address Line 2">
+		<input type="text" class="form-control" id="CityButton" placeholder = "City">
+		<input type="text" class="form-control" id="StateButton" placeholder = "State/Province/Region">
+		<input type="text" class="form-control" id="ZipButton" placeholder = "Zip Code">
+		<input type="text" class="form-control" id="CountryButton" placeholder = "Country">
+		<button type="button" id="SaveButton">Save Address</button>
+	</div>
+	
+<script type="text/javascript" src="js/ShippingAddressPageBootstrap.js"></script>
+<script type="text/javascript" src="js/ShippingAddressPageJQuery.min.js"></script>
+<script type="text/javascript" src="js/ShippingAddressPagePopper.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LoginPage</title>
+<link href="css/CartPageBootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+    margin-bottom: 40px;
+}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">TruckTracker&nbsp;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Catalog <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Account <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Points <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Settings <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Your Cart <span class="sr-only">(current)</span></a>
+            </li>
+			  <li class="nav-item active">
+              <a class="nav-link" href="#">Log Out <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+	
+<div id="FilterPane">
+	
+</div>
+    
+	<div id="ResultPane">
+		
+	  <div id="ShippingPane">
+	    <p id="ShippingAddressText">Shipping Address:</p>
+		<p id="Address1">123 Testing Street</p>
+		  <p id="Address2">Clemson, SC 12345</p>
+	  <button type="button" id="ChangeAddressButton">Change Address</button>
+	  </div>
+		
+<div id="ResultOne">
+   	<img src="Images/40X40.gif" alt="" width="100" height="100" id="itemone"/>
+	<p id="itemonename">Item Name</p>
+		<p id="itemoneprice">Price</p>
+	  </div>
+		
+	  <div id="ResultTwo">
+      	<img src="Images/40X40.gif" alt="" width="100" height="100" id="itemone"/>
+		<p id="itemtwoname">Item Name</p>
+		<p id="itemtwoprice">Price</p>
+	  </div>
+		
+	  <div id="ResultThree">
+      	<img src="Images/40X40.gif" alt="" width="100" height="100" id="itemone"/>
+		<p id="itemthreename">Item Name</p>
+		<p id="itemthreeprice">Price</p>
+	  </div>
+		
+		
+	</div>
+	
+	<div id="ButtonPane">
+		<p id="TotalPointsText">Total Cost:</p>
+		<p id="NumPoints"># of Points</p>
+	  <button type="button" id="OrderButton">Place Order</button>
+	</div>
+	
+<script type="text/javascript" src="js/CartPageBootstrap.js"></script>
+<script type="text/javascript" src="js/CartPageJQuery.min.js"></script>
+<script type="text/javascript" src="js/CartPagePopper.js"></script>
+	
+</body>
+</html>
