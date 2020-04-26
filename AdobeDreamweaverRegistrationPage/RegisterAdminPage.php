@@ -10,14 +10,11 @@ error_reporting(E_ALL);
 <?php
 If(isset($_POST['LoginPageLoginButton'])){
 	$Email = $_POST['LoginPageUsername']; //echo $Email;
-	$FirstName = $_POST['RegisterDriverFirstName']; //echo $FirstName;
-	$LastName = $_POST['RegisterDriverLastName']; //echo $LastName;
-	$Address = $_POST['RegisterDriverAddress']; //echo $Address;
 	$Password = $_POST['LoginNamePassword']; //echo $Password;
 	$PasswordConfirm = $_POST['LoginNameConfirmPassword'];
 
-	$query = "INSERT INTO Driver (Email, First_Name, Last_Name, Address, Password)
-		  VALUES ('$Email', '$FirstName', '$LastName', '$Address', '$Password')";
+	$query = "INSERT INTO Admin (Email,  Password)
+		  VALUES ('$Email', '$Password')";
 
 	if(mysqli_query($db, $query) == TRUE){
 		header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html'); //echo "Error: " . $sql . "<br>" . mysqli_error($db);
@@ -37,7 +34,7 @@ If(isset($_POST['LoginPageLoginButton'])){
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LoginPage</title>
-<link href="css/RegisterDriverPage.css" rel="stylesheet">
+<link href="css/RegisterAdminPage.css" rel="stylesheet">
 <style type="text/css">
 body {
     margin-bottom: 40px;
@@ -80,11 +77,11 @@ body {
 
     <div id="LoginPageBox">
 	<form method = "post">
-		<h1 id="LoginPageLoginHeader">Register for a Driver Account!</h1>
+		<h1 id="LoginPageLoginHeader">Register for a Admin Account!</h1>
 		<input type="text" class="form-control" id="LoginPageUsernameButton" name="LoginPageUsername" placeholder = "Email">
-		<input type="text" class="form-control" id="RegisterDriverFirstNameButton" name="RegisterDriverFirstName" placeholder = "First Name">
-		<input type="text" class="form-control" id="RegisterDriverLastNameButton" name="RegisterDriverLastName" placeholder = "Last Name">
-		<input type="text" class="form-control" id="RegisterDriverAddressButton" name="RegisterDriverAddress" placeholder = "Address">
+		<input type="text" class="form-control" id="RegisterAdminFirstNameButton" name="RegisterAdminFirstName" placeholder = "First Name">
+		<input type="text" class="form-control" id="RegisterAdminLastNameButton" name="RegisterAdminLastName" placeholder = "Last Name">
+		<input type="text" class="form-control" id="RegisterAdminAddressButton" name="RegisterAdminAddress" placeholder = "Address">
 		<input type="text" class="form-control" id="LoginNamePasswordButton" name="LoginNamePassword" placeholder = "Password">
 		<input type="text" class="form-control" id="LoginNameConfirmPasswordButton" name="LoginNameConfirmPassword" placeholder = "Confirm Password">
 		<button type="submit" id="LoginPageLoginButton" name="LoginPageLoginButton">Submit</button>
