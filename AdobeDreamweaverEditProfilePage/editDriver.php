@@ -38,10 +38,10 @@ If(isset($_POST['DriverSaveButton'])){
 	$Birthday = $_POST['EditProfileBirthday'];
 
         $query = "UPDATE Driver
-                  SET Email = '$Email'
-		      First_Name = '$FirstName'
-		      Last_Name = '$LastName'
-		      Address = '$Address'
+                  SET Email = '$Email',
+		      First_Name = '$FirstName',
+		      Last_Name = '$LastName',
+		      Address = '$Address',
 		      Date_Of_Birth = '$Birthday'
 		  WHERE Driver_ID = '{$_SESSION['Driver_ID']}'";
 
