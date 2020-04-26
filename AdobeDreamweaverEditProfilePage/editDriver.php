@@ -6,7 +6,7 @@ session_start();
 error_reporting(E_ALL);
 
 ?>
-
+/*
 <?php
 
 $sql = "SELECT First_Name, Last_Name, Address, Driver_ID, Date_Of_Birth
@@ -27,7 +27,6 @@ $_SESSION['Date_Of_Birth'] = $rowInfo['Date_Of_Birth'];
 
 ?>
 
-/*
 <?php
 
 If(isset($_POST['DriverSaveButton'])){
