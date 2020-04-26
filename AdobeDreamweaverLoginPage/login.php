@@ -45,7 +45,7 @@ If(isset($_POST['LoginPageLoginButton'])){
     $userType = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     if ( $userType["From_Table"] == "Driver"){
-        header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html?Email=');
+        header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersion.html');
     }else if ( $userType["From_Table"] == "Sponsor"){
         header('Location: ../AdobeDreamweaverHomePage/HomeTemplateVersionSponsor.html');
     }else if ( $userType["From_Table"] == "Admin"){
