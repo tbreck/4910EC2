@@ -29,7 +29,7 @@ $_SESSION['Point_Dollar_Ratio'] = $rowInfo['Point_Dollar_Ratio'];
 $sql = "SELECT  Count(*)
         FROM Driver/Sponsor
         WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
-$count_drivers = mysqli_query($db, $sql);
+$count_drivers = 2;
 
 if(!mysqli_num_rows($result)){
         echo 'Problem with fetching data';
