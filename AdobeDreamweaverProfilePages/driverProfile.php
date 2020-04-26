@@ -94,7 +94,7 @@ body {
   <p>Password: <?php echo $_SESSION['Password']?></p>
   <p>Total Points: TO INPUT</p>
 
-  <button type="button">Edit Profile</button>
+  <button type="submit" id="ProfilePageEditProfileButtonDriver" formaction="/AdobeDreamweaverEditProfilePage/editDriver.php">Edit Profile</button>
   <button type="button">Reset Password</button>
 
 </div>
