@@ -82,7 +82,6 @@ body {
 <img src="Images/profile.png" width="200" height="211" alt=""/> </div>
 	
 <div id="body_column">
-  <input type="text" class="form-control" id="EditProfileDriverName" placeholder = "Driver Name">
   <hr>
   <input type="text" class="form-control" id="EditProfileFirstName" placeholder = "First Name">
   <input type="text" class="form-control" id="EditProfileLastName" placeholder = "Last Name">
