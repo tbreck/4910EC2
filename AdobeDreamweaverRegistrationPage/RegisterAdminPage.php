@@ -77,7 +77,7 @@ body {
 
     <div id="LoginPageBox">
 	<form method = "post">
-		<h1 id="LoginPageLoginHeader">Register for a Admin Account!</h1>
+		<h1 id="LoginPageLoginHeader">Register for an Administrator Account!</h1>
 		<input type="text" class="form-control" id="LoginPageUsernameButton" name="LoginPageUsername" placeholder = "Email">
 		<input type="text" class="form-control" id="LoginNamePasswordButton" name="LoginNamePassword" placeholder = "Password">
 		<input type="text" class="form-control" id="LoginNameConfirmPasswordButton" name="LoginNameConfirmPassword" placeholder = "Confirm Password">
