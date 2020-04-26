@@ -27,7 +27,7 @@ $_SESSION['Date_Of_Birth'] = $rowInfo['Date_Of_Birth'];
 
 ?>
 
-/*
+
 <?php
 
 If(isset($_POST['DriverSaveButton'])){
@@ -35,7 +35,7 @@ If(isset($_POST['DriverSaveButton'])){
         $FirstName = $_POST['EditProfileFirstName']; //echo $FirstName;
         $LastName = $_POST['EditProfileLastName']; //echo $LastName;
         $Address = $_POST['EditProfileAddress']; //echo $Address;
-	$Birthday = $_POST['EditProfileBirthday']
+	$Birthday = $_POST['EditProfileBirthday'];
 
         $query = "UPDATE Driver
                   SET Email = '$Email'
@@ -55,7 +55,7 @@ If(isset($_POST['DriverSaveButton'])){
 }
 
 ?>
-*/
+
 <html>
 <html lang="en">
 <head>
