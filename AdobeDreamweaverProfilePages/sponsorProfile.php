@@ -31,9 +31,7 @@ $sql = "SELECT  Sponsor_ID, Count(*)
         WHERE Sponsor_ID = '{$_SESSION['Sponsor_ID']}'";
 $count_drivers = mysqli_query($db, $sql);
 
-if(!mysqli_num_rows($count_drivers)){
-        echo $_SESSION['Sponsor_ID'];
-}
+
 
 ?>
 
@@ -101,7 +99,12 @@ body {
   <p>Address: <?php echo $_SESSION['Address']?></p>
   <p>Point to $ Ratio: <?php echo $_SESSION['Point_Dollar_Ratio']?> to 1</p>
   <p>Password: <?php echo $_SESSION['Password']?></p>
-  <p>Total Drivers: <?php echo $count_drivers?></p>
+  <p>Total Drivers: <?php if(!mysqli_num_rows($count_drivers)){
+                            echo '0';
+                          }
+                          else{
+                            echo $count_drivers;
+                          }?></p>
 
   <button type="button">Edit Profile</button>
   <button type="button">Reset Password</button>
