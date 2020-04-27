@@ -69,8 +69,11 @@ body {
   <p>Email: <?php echo $_SESSION['Email']?></p>
   <p>Password: <?php echo $_SESSION['Password']?></p>
 
-  
-  <button type="submit" id="ForgotPassword" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/forgotPassword.php">Reset Password</button>
+
+<!--  <button type="submit" id="ForgotPassword" formaction="/AdobeDreamweaverForgotPasswordEnterEmailPage/forgotPassword.php">Reset Password</button> -->
+  <form action="/AdobeDreamweaverForgotPasswordEnterEmailPage/forgotPassword.php">
+    <input type="submit" value="Reset Password" />
+</form>
   <form action="/AdobeDreamweaverRegistrationPage/RegisterAdminPage.php">
     <input type="submit" value="Create Admin" />
 </form>
